@@ -18,6 +18,7 @@ public class Card {
 	}
 
 	public void accept (Player victim) {
+		System.out.printf("%s drew the card \"%s\"\n", victim.toString(), this.description);
 		this.action.accept(victim);
 	}
 }

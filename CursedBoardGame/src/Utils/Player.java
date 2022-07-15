@@ -23,8 +23,13 @@ public class Player {
 		this.currentDice = d;
 	}
 	
-	public int roll () {
+	private int roll () {
 		return this.currentDice.roll();
+	}
+	
+	public void play () {
+		this.move(this.roll());
+		// TODO: Get random card from the bullsh*t deck
 	}
 
 	public void move (int n) {
@@ -32,6 +37,6 @@ public class Player {
 	}
 	
 	public String toString () {
-		return String.format("Player %s at %d.", this.name, this.getPosition());
+		return String.format("Player %s at %d", this.name, this.getPosition());
 	}
 }

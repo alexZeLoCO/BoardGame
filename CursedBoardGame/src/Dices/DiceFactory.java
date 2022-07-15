@@ -2,6 +2,9 @@ package Dices;
 
 public class DiceFactory {
 
+	// TODO: Make each dice act as an instance of a Singleton
+	Dice [] dice = new Dice[12];
+
 	private static Dice getDice (Sides s) {
 		switch (s) {
 			case THREE:  return new Dice(3);
