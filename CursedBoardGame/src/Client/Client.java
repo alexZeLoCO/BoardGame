@@ -132,7 +132,12 @@ public class Client {
 			// conexión con el servicio por defecto en localhost
 
 			// com = new CommClient();
-			com = new CommClient("192.168.0.37", 5000);
+			System.out.println("Enter server direction: ");
+			String serv = scanner.nextLine();
+			System.out.println("Enter target port: ");
+			int port = scanner.nextInt();
+
+			com = new CommClient(serv, port);
 			// TODO: com = new CommClient(servidor.ddns.net, puerto); (?)
 
 			// activa el registro de mensajes del cliente
