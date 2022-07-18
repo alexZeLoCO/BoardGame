@@ -1,291 +1,929 @@
-S1(c1): setName("")
-S2(c1): startGame()
-S1(c1): OK!(false)
-S3(c1): startGame()
-S2(c1): OK!(false)
+S1(c1): isEmptyLobby()
+S1(c1): OK!(true)
+S2(c1): setLobbySize(2)
+S3(c1): setName("alex")
 S4(c1): startGame()
-S3(c1): OK!(false)
+S2(c1): OK!(false)
+S1(c2): isEmptyLobby()
+S1(c2): OK!(false)
 S5(c1): startGame()
-S4(c1): OK!(false)
-S6(c1): startGame()
-S5(c1): OK!(false)
-S7(c1): startGame()
-S6(c1): OK!(false)
-S8(c1): startGame()
-S7(c1): OK!(false)
-S9(c1): startGame()
-S8(c1): OK!(false)
-S1(c2): setName("")
-S2(c2): startGame()
-S1(c2): OK!(true)
-S3(c2): myTurn()
-S2(c2): OK!(1)
+S3(c1): OK!(false)
+S2(c2): setName("napoleon")
+S3(c2): startGame()
+S2(c2): OK!(true)
 S4(c2): myTurn()
 S3(c2): OK!(1)
-S5(c2): show()
-S4(c2): OK!("--------------------
+S5(c2): myTurn()
+S4(c2): OK!(1)
+S6(c2): show()
+S5(c2): OK!("--------------------
 
 	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	0/100
-2.	          	-	    Normal 6	-	0/100
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Normal 6	-	0/100
 --------------------")
-S10(c1): startGame()
-S9(c1): OK!(true)
-S11(c1): myTurn()
-S10(c1): OK!(0)
-S12(c1): myTurn()
-S11(c1): OK!(0)
-S13(c1): show()
-S12(c1): OK!("--------------------
+S7(c2): play()
+S6(c2): OK!("napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+")
+S8(c2): myTurn()
+S7(c2): OK!(0)
+S9(c2): show()
+S8(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
 
 	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	0/100
-2.	          	-	    Normal 6	-	0/100
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S6(c1): startGame()
+S4(c1): OK!(true)
+S7(c1): myTurn()
+S5(c1): OK!(0)
+S8(c1): myTurn()
+S6(c1): OK!(0)
+S9(c1): show()
+S7(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S10(c2): myTurn()
+S9(c2): OK!(0)
+S11(c2): show()
+S10(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S10(c1): myTurn()
+S8(c1): OK!(0)
+S11(c1): show()
+S9(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S12(c2): myTurn()
+S11(c2): OK!(0)
+S13(c2): show()
+S12(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S12(c1): myTurn()
+S10(c1): OK!(0)
+S13(c1): show()
+S11(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S14(c2): myTurn()
+S13(c2): OK!(0)
+S15(c2): show()
+S14(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
 --------------------")
 S14(c1): myTurn()
-S13(c1): OK!(0)
+S12(c1): OK!(0)
 S15(c1): show()
-S14(c1): OK!("--------------------
+S13(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
 
 	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	0/100
-2.	          	-	    Normal 6	-	0/100
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
 --------------------")
-S16(c1): myTurn()
-S15(c1): OK!(0)
-S17(c1): show()
-S16(c1): OK!("--------------------
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	0/100
-2.	          	-	    Normal 6	-	0/100
---------------------")
-S18(c1): myTurn()
-S17(c1): OK!(0)
-S19(c1): show()
-S18(c1): OK!("--------------------
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	0/100
-2.	          	-	    Normal 6	-	0/100
---------------------")
-S6(c2): play()
-S5(c2): OK!(" has moved forward 1 positions
- has dealt the card: "You now use a normal THREE-sided die"
-")
-S7(c2): myTurn()
-S6(c2): OK!(0)
-S8(c2): show()
-S7(c2): OK!("--------------------
- has moved forward 1 positions
- has dealt the card: "You now use a normal THREE-sided die"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	0/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S9(c2): myTurn()
-S8(c2): OK!(0)
-S10(c2): show()
-S9(c2): OK!("--------------------
- has moved forward 1 positions
- has dealt the card: "You now use a normal THREE-sided die"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	0/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S20(c1): myTurn()
-S19(c1): OK!(1)
-S21(c1): show()
-S20(c1): OK!("--------------------
- has moved forward 1 positions
- has dealt the card: "You now use a normal THREE-sided die"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	0/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S11(c2): myTurn()
-S10(c2): OK!(0)
-S12(c2): show()
-S11(c2): OK!("--------------------
- has moved forward 1 positions
- has dealt the card: "You now use a normal THREE-sided die"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	0/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S22(c1): play()
-S21(c1): OK!(" has moved forward 5 positions
- has dealt the card: "Your die has been reset"
-")
-S23(c1): myTurn()
-S22(c1): OK!(0)
-S24(c1): show()
-S23(c1): OK!("--------------------
- has moved forward 5 positions
- has dealt the card: "Your die has been reset"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S13(c2): myTurn()
-S12(c2): OK!(1)
-S14(c2): show()
-S13(c2): OK!("--------------------
- has moved forward 5 positions
- has dealt the card: "Your die has been reset"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S25(c1): myTurn()
-S24(c1): OK!(0)
-S26(c1): show()
-S25(c1): OK!("--------------------
- has moved forward 5 positions
- has dealt the card: "Your die has been reset"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S27(c1): myTurn()
-S26(c1): OK!(0)
-S28(c1): show()
-S27(c1): OK!("--------------------
- has moved forward 5 positions
- has dealt the card: "Your die has been reset"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S29(c1): myTurn()
-S28(c1): OK!(0)
-S30(c1): show()
-S29(c1): OK!("--------------------
- has moved forward 5 positions
- has dealt the card: "Your die has been reset"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S31(c1): myTurn()
-S30(c1): OK!(0)
-S32(c1): show()
-S31(c1): OK!("--------------------
- has moved forward 5 positions
- has dealt the card: "Your die has been reset"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S33(c1): myTurn()
-S32(c1): OK!(0)
-S34(c1): show()
-S33(c1): OK!("--------------------
- has moved forward 5 positions
- has dealt the card: "Your die has been reset"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S35(c1): myTurn()
-S34(c1): OK!(0)
-S36(c1): show()
-S35(c1): OK!("--------------------
- has moved forward 5 positions
- has dealt the card: "Your die has been reset"
-
-	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Normal 3	-	1/100
---------------------")
-S15(c2): play()
-S14(c2): OK!(" has moved forward 1 positions
- has dealt the card: "You now use a cursed EIGHT-sided die"
-")
 S16(c2): myTurn()
 S15(c2): OK!(0)
 S17(c2): show()
 S16(c2): OK!("--------------------
- has moved forward 1 positions
- has dealt the card: "You now use a cursed EIGHT-sided die"
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
 
 	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Cursed 8	-	2/100
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
 --------------------")
-S37(c1): myTurn()
-S36(c1): OK!(1)
-S38(c1): show()
-S37(c1): OK!("--------------------
- has moved forward 1 positions
- has dealt the card: "You now use a cursed EIGHT-sided die"
+S16(c1): myTurn()
+S14(c1): OK!(0)
+S17(c1): show()
+S15(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
 
 	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Cursed 8	-	2/100
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
 --------------------")
 S18(c2): myTurn()
 S17(c2): OK!(0)
 S19(c2): show()
 S18(c2): OK!("--------------------
- has moved forward 1 positions
- has dealt the card: "You now use a cursed EIGHT-sided die"
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
 
 	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Cursed 8	-	2/100
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S18(c1): myTurn()
+S16(c1): OK!(0)
+S19(c1): show()
+S17(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
 --------------------")
 S20(c2): myTurn()
 S19(c2): OK!(0)
 S21(c2): show()
 S20(c2): OK!("--------------------
- has moved forward 1 positions
- has dealt the card: "You now use a cursed EIGHT-sided die"
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
 
 	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Cursed 8	-	2/100
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S20(c1): myTurn()
+S18(c1): OK!(0)
+S21(c1): show()
+S19(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
 --------------------")
 S22(c2): myTurn()
 S21(c2): OK!(0)
 S23(c2): show()
 S22(c2): OK!("--------------------
- has moved forward 1 positions
- has dealt the card: "You now use a cursed EIGHT-sided die"
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
 
 	      Name	-	       Die	-	Position
-1.	          	-	    Normal 6	-	5/100
-2.	          	-	    Cursed 8	-	2/100
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
 --------------------")
-S39(c1): play()
-S38(c1): OK!(" has moved forward 6 positions
- has dealt the card: "You now use a cursed EIGHT-sided die"
-")
+S22(c1): myTurn()
+S20(c1): OK!(0)
+S23(c1): show()
+S21(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S24(c2): myTurn()
+S23(c2): OK!(0)
+S25(c2): show()
+S24(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S24(c1): myTurn()
+S22(c1): OK!(0)
+S25(c1): show()
+S23(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S26(c2): myTurn()
+S25(c2): OK!(0)
+S27(c2): show()
+S26(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S26(c1): myTurn()
+S24(c1): OK!(0)
+S27(c1): show()
+S25(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S28(c2): myTurn()
+S27(c2): OK!(0)
+S29(c2): show()
+S28(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S28(c1): myTurn()
+S26(c1): OK!(0)
+S29(c1): show()
+S27(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S30(c2): myTurn()
+S29(c2): OK!(0)
+S31(c2): show()
+S30(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S30(c1): myTurn()
+S28(c1): OK!(0)
+S31(c1): show()
+S29(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S32(c2): myTurn()
+S31(c2): OK!(0)
+S33(c2): show()
+S32(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S32(c1): myTurn()
+S30(c1): OK!(0)
+S33(c1): show()
+S31(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S34(c2): myTurn()
+S33(c2): OK!(0)
+S35(c2): show()
+S34(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S34(c1): myTurn()
+S32(c1): OK!(0)
+S35(c1): show()
+S33(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S36(c2): myTurn()
+S35(c2): OK!(0)
+S37(c2): show()
+S36(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S36(c1): myTurn()
+S34(c1): OK!(0)
+S37(c1): show()
+S35(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S38(c2): myTurn()
+S37(c2): OK!(0)
+S39(c2): show()
+S38(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S38(c1): myTurn()
+S36(c1): OK!(0)
+S39(c1): show()
+S37(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S40(c2): myTurn()
+S39(c2): OK!(0)
+S41(c2): show()
+S40(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
 S40(c1): myTurn()
-S39(c1): OK!(10)
+S38(c1): OK!(0)
 S41(c1): show()
-S40(c1): OK!("--------------------
- has moved forward 6 positions
- has dealt the card: "You now use a cursed EIGHT-sided die"
+S39(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
 
 	      Name	-	       Die	-	Position
-1.	          	-	    Cursed 8	-	11/100
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
 --------------------")
-S42(c1): play()
-S41(c1): OK!(" has moved forward 1 positions
- has dealt the card: "Go backwards 10 positions"
+S42(c2): myTurn()
+S41(c2): OK!(0)
+S43(c2): show()
+S42(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S42(c1): myTurn()
+S40(c1): OK!(0)
+S43(c1): show()
+S41(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S44(c2): myTurn()
+S43(c2): OK!(0)
+S45(c2): show()
+S44(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S44(c1): myTurn()
+S42(c1): OK!(0)
+S45(c1): show()
+S43(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S46(c2): myTurn()
+S45(c2): OK!(0)
+S47(c2): show()
+S46(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S46(c1): myTurn()
+S44(c1): OK!(0)
+S47(c1): show()
+S45(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S48(c2): myTurn()
+S47(c2): OK!(0)
+S49(c2): show()
+S48(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S48(c1): myTurn()
+S46(c1): OK!(0)
+S49(c1): show()
+S47(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S50(c2): myTurn()
+S49(c2): OK!(0)
+S51(c2): show()
+S50(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S50(c1): myTurn()
+S48(c1): OK!(0)
+S51(c1): show()
+S49(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S52(c2): myTurn()
+S51(c2): OK!(0)
+S53(c2): show()
+S52(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S52(c1): myTurn()
+S50(c1): OK!(0)
+S53(c1): show()
+S51(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S54(c2): myTurn()
+S53(c2): OK!(0)
+S55(c2): show()
+S54(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S54(c1): myTurn()
+S52(c1): OK!(0)
+S55(c1): show()
+S53(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S56(c2): myTurn()
+S55(c2): OK!(0)
+S57(c2): show()
+S56(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S56(c1): myTurn()
+S54(c1): OK!(0)
+S57(c1): show()
+S55(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S58(c2): myTurn()
+S57(c2): OK!(0)
+S59(c2): show()
+S58(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S58(c1): myTurn()
+S56(c1): OK!(0)
+S59(c1): show()
+S57(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S60(c2): myTurn()
+S59(c2): OK!(0)
+S61(c2): show()
+S60(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S60(c1): myTurn()
+S58(c1): OK!(0)
+S61(c1): show()
+S59(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S62(c2): myTurn()
+S61(c2): OK!(0)
+S63(c2): show()
+S62(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S62(c1): myTurn()
+S60(c1): OK!(0)
+S63(c1): show()
+S61(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S64(c2): myTurn()
+S63(c2): OK!(0)
+S65(c2): show()
+S64(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S64(c1): myTurn()
+S62(c1): OK!(0)
+S65(c1): show()
+S63(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S66(c2): myTurn()
+S65(c2): OK!(0)
+S67(c2): show()
+S66(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S66(c1): myTurn()
+S64(c1): OK!(0)
+S67(c1): show()
+S65(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S68(c2): myTurn()
+S67(c2): OK!(0)
+S69(c2): show()
+S68(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S68(c1): myTurn()
+S66(c1): OK!(0)
+S69(c1): show()
+S67(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S70(c2): myTurn()
+S69(c2): OK!(0)
+S71(c2): show()
+S70(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S70(c1): myTurn()
+S68(c1): OK!(0)
+S71(c1): show()
+S69(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S72(c2): myTurn()
+S71(c2): OK!(0)
+S73(c2): show()
+S72(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S72(c1): myTurn()
+S70(c1): OK!(0)
+S73(c1): show()
+S71(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S74(c2): myTurn()
+S73(c2): OK!(0)
+S75(c2): show()
+S74(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S74(c1): myTurn()
+S72(c1): OK!(0)
+S75(c1): show()
+S73(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S76(c2): myTurn()
+S75(c2): OK!(0)
+S77(c2): show()
+S76(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S76(c1): myTurn()
+S74(c1): OK!(0)
+S77(c1): show()
+S75(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S78(c2): myTurn()
+S77(c2): OK!(0)
+S79(c2): show()
+S78(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S78(c1): myTurn()
+S76(c1): OK!(0)
+S79(c1): show()
+S77(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S80(c2): myTurn()
+S79(c2): OK!(0)
+S81(c2): show()
+S80(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S80(c1): myTurn()
+S78(c1): OK!(0)
+S81(c1): show()
+S79(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S82(c2): myTurn()
+S81(c2): OK!(0)
+S83(c2): show()
+S82(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S82(c1): myTurn()
+S80(c1): OK!(0)
+S83(c1): show()
+S81(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S84(c2): myTurn()
+S83(c2): OK!(0)
+S85(c2): show()
+S84(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S84(c1): myTurn()
+S82(c1): OK!(0)
+S85(c1): show()
+S83(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S86(c2): myTurn()
+S85(c2): OK!(0)
+S87(c2): show()
+S86(c2): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S86(c1): myTurn()
+S84(c1): OK!(0)
+S87(c1): show()
+S85(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Cursed 8	-	3/100
+--------------------")
+S88(c1): myTurn()
+S86(c1): OK!(10)
+S89(c1): show()
+S87(c1): OK!("--------------------
+napoleon has moved forward 3 positions
+napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+--------------------")
+S90(c1): play()
+S88(c1): OK!("alex has moved forward 6 positions
+alex has dealt the card: "Go forward 10 positions"
 ")
-S43(c1): position()
-S42(c1): OK!(2)
-S44(c1): EXIT!()
+S91(c1): position()
+S89(c1): OK!(16)
+S92(c1): EXIT!()

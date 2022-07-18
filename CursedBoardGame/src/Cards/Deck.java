@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import Dice.Sides;
+import Server.Service;
+import Utils.Player;
 import Dice.DiceFactory;
 
 /**
@@ -33,7 +35,7 @@ public class Deck {
 	 * Creates a new empty deck.
 	 */
 	private Deck () {
-		this(2);
+		this(1);
 	}
 	
 	/**
@@ -42,7 +44,7 @@ public class Deck {
 	 * @param nCards Number of cards for each instance.
 	 */
 	private Deck (int nCards) {
-		this.N_CARDS = nCards;
+		this.N_CARDS = Math.max(1, Math.abs(nCards));
 		this.totalCards = 0;
 		this.deck = new ArrayList<Card>();
 		this.left = new ArrayList<Integer>();
@@ -115,7 +117,7 @@ public class Deck {
 	/**
 	 * Adds all the Cards that are related to dice.
 	 */
-	public void makeDieCards () {
+	private void makeDieCards () {
 		for (Sides s : Sides.values()) {
 			this.add(new Card(String.format("You now use a normal %s-sided die", s.toString()), (x) -> x.setDie(DiceFactory.getDie(s, false))));
 		}
@@ -123,7 +125,38 @@ public class Deck {
 			this.add(new Card(String.format("You now use a cursed %s-sided die", s.toString()), (x) -> x.setDie(DiceFactory.getDie(s, true))));
 		}
 		this.add(new Card("Your die has been reset", (x) -> x.setDie(DiceFactory.getDie(Sides.SIX, false))));
-		this.add(new Card("Your die is now cursed", (x) -> x.setDie(DiceFactory.curseSwitch(x.getDie()))));
+		this.add(new Card("Your die is now cursed/normal", (x) -> x.setDie(DiceFactory.curseSwitch(x.getDie()))));
+		this.add(new Card("You now have no die", (x) -> x.setNDice(0)));
+		this.add(new Card("You now have 1 die", (x) -> x.setNDice(1)));
+		for (int i = 2 ; i < 5 ; i++) {
+			int a = i;
+			this.add(new Card(String.format("You now have %d dice", i), (x) -> x.setNDice(a)));
+		}
+	}
+
+	/**
+	 * Adds all the Cards that are related to positions.
+	 */
+	private void makePositionCards () {
+		this.add(new Card("Go forward 10 positions", (x) -> x.move(10)));
+		this.add(new Card("Go backwards 10 positions", (x) -> x.move(-10)));
+		this.add(new Card("You go back to the start", (x) -> x.move(x.getPosition()*(-1))));
+		this.add(new Card("You switch position with a random player", (x) -> {
+			Player target = Service.getPlayers().get(generator.nextInt()%Service.getPlayers().size());
+			int target_new_position = x.getPosition();
+			x.move(target.getPosition()-x.getPosition());
+			target.move(target_new_position-target.getPosition());
+		}));
+	}
+	
+	/**
+	 * Adds all the Cards that are related to turns.
+	 */
+	private void makeTurnCards () {
+		for (int i = 1 ; i < 11 ; i++) {
+			int a = i;
+			this.add(new Card("You now lose " + i + "turns", (x) -> x.setSkipTurns(a)));
+		}
 	}
 
 	/**
@@ -131,9 +164,8 @@ public class Deck {
 	 */
 	public void makeDeck () {
 		this.makeDieCards();
-		this.add(new Card("Go forward 10 positions", (x) -> x.move(10)));
-		this.add(new Card("Go backwards 10 positions", (x) -> x.move(-10)));
-		this.add(new Card("You go back to the start", (x) -> x.move(x.getPosition()*(-1))));
+		this.makePositionCards();
+		this.makeTurnCards();
 	}
 
 	/**

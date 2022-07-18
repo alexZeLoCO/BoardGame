@@ -123,6 +123,34 @@ public class Client {
 		System.out.print("Name: ");
 		com.sendEvent(new ProtocolMessages("setName", scanner.nextLine()));
 	}
+	
+	/**
+	 * Sets the number of needed players to start a game if the lobby is empty.
+	 * 
+	 * @throws IOException
+	 * @throws ChannelException
+	 */
+	public static void setPlayers ()  throws IOException, ChannelException {
+		com.sendEvent(new ProtocolMessages("isEmptyLobby"));
+		try {
+			if ((boolean) com.processReply(com.waitReply())) {
+				System.out.print("Enter lobby size: ");
+				com.sendEvent(new ProtocolMessages("setLobbySize", Integer.parseInt(scanner.nextLine())));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static boolean win () throws IOException, ChannelException {
+		com.sendEvent(new ProtocolMessages("end"));
+		try {
+			return (boolean) com.processReply(com.waitReply());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 
 	public static void main(String[] args) {
 
@@ -131,8 +159,11 @@ public class Client {
 			// crear el canal de comunicación y establecer la
 			// conexión con el servicio por defecto en localhost
 
-			// com = new CommClient();
-			com = new CommClient(args[0], Integer.parseInt(args[1]));
+			if (args.length < 2) {
+				com = new CommClient();
+			} else {
+				com = new CommClient(args[0], Integer.parseInt(args[1]));
+			}
 
 			// activa el registro de mensajes del cliente
 			com.activateMessageLog(); // opcional
@@ -146,6 +177,7 @@ public class Client {
 
 		try {
 
+			setPlayers();
 			setName();
 			
 			// si es posible (oponente disponible), comenzar el juego
@@ -164,7 +196,7 @@ public class Client {
 				} while (n == 0); // esperando el turno
 
 				System.out.println("Enter to roll the dice!");
-				scanner.nextLine();
+				// scanner.nextLine();
 				play();
 
 			}
@@ -173,7 +205,7 @@ public class Client {
 				System.out.printf("\nYou left the game!\n");
 			} else { // el juego ha terminado
 				System.out.printf("\nGame ended: %s\n",
-						position() < CursedBoardGame.CELLS ? "You lose" : "You win");
+						win() ? "You win" : "You lose");
 			}
 		} catch (IOException | ChannelException e) {
 			System.err.printf("Error: %s\n", e.getMessage());

@@ -14,6 +14,9 @@ class Server {
 		com.addFunction("play", (o, x) -> ((Service)o).play());
 		com.addFunction("show", (o, x) -> ((Service)o).show());
 		com.addAction("setName", (o, x) -> ((Service)o).setName((String) x[0]), true);
+		com.addAction("setLobbySize", (o, x) -> ((Service)o).setLobbySize((int) x[0]), true);
+		com.addFunction("isEmptyLobby", (o, x) -> ((Service)o).isEmptyLobby());
+		com.addFunction("win", (o, x) -> ((Service)o).win());
 	}
 
 	public static void main(String[] args) {

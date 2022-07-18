@@ -17,6 +17,8 @@ public class Player {
 	private int position; // Current position of the player
 	private final String name; // Name of the player
 	private Die currentDie; // Current die of the player
+	private int nDie; // Number of dice
+	private int skipTurns; // Number of turns to skip
 	
 	/**
 	 * Creates a new player with a name.
@@ -25,6 +27,8 @@ public class Player {
 	public Player (String name) {
 		this.name = name;
 		this.currentDie = new Die();
+		this.nDie = 1;
+		this.skipTurns = 0;
 	}
 	
 	/**
@@ -35,6 +39,42 @@ public class Player {
 		return this.position;
 	}
 	
+	/**
+	 * Returns the number of dice this player has.
+	 * 
+	 * @return Number of dice this player has.
+	 */
+	public int getNDice () {
+		return this.nDie;
+	}
+	
+	/**
+	 * Sets the number of dice this player has.
+	 * 
+	 * @param n Number of dice.
+	 */
+	public void setNDice (int n) {
+		this.nDie = Math.abs(n);
+	}
+	
+	/**
+	 * Returns the number of turns left to skip.
+	 * 
+	 * @return Number of turns left to skip.
+	 */
+	public int getSkipTurns () {
+		return this.skipTurns;
+	}
+
+	/**
+	 * Sets the number of skips turns left.
+	 * 
+	 * @param s Number of skip turns.
+	 */
+	public void setSkipTurns (int s) {
+		this.skipTurns = s;
+	}
+
 	/**
 	 * Sets this player's die.
 	 * @param d Die.
@@ -62,12 +102,16 @@ public class Player {
 	}
 
 	/**
-	 * Rolls this player's die.
+	 * Rolls this player's dice.
 	 * 
-	 * @return Face of the die that ended upwards.
+	 * @return sum of the upwards-facing faces of this player dice.
 	 */
 	private int roll () {
-		return this.currentDie.roll();
+		int s = 0;
+		for (int i = 0 ; i < this.getNDice() ; i++) {
+			s+=this.currentDie.roll();
+		}
+		return s;
 	}
 	
 	/**
@@ -75,6 +119,9 @@ public class Player {
 	 */
 	public String play () {
 		String out = "";
+		if (this.getSkipTurns() > 0) {
+			return String.format("You skip this turn!\nSkip turns left: %d\n", --this.skipTurns);
+		}
 		out = this.move(this.roll());
 		Card c = Deck.getInstance().drawCard();
 		out += String.format("%s has dealt the card: \"%s\"\n", this.getName(), c.getDescription());

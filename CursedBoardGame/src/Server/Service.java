@@ -28,11 +28,12 @@ enum State {
 
 public class Service implements CursedBoardGame {
 
-	private static final int NEEDED_PLAYERS = 2;
+	private static int NEEDED_PLAYERS;
 	private volatile static Map<Integer, Player> players = new HashMap<Integer, Player>();
 	private volatile static Map<Integer, Boolean> turn = new HashMap<Integer, Boolean>();
 	
 	private static boolean first = true;
+	private static boolean empty = true;
 
 	private static int round = 0;
 	private static String lastPlay = "";
@@ -50,6 +51,36 @@ public class Service implements CursedBoardGame {
 		this.state = State.SETTING_NAME;
 	}
 	
+	/**
+	 * Returns true if the lobby is empty.
+	 * 
+	 * @return True when the lobby is empty
+	 */
+	public boolean isEmptyLobby () {
+		return empty;
+	}
+	
+	/**
+	 * Returns the player list
+	 * 
+	 * @return Player list
+	 */
+	public static Map<Integer, Player> getPlayers () {
+		return players;
+	}
+	
+	/**
+	 * Sets the needed players to start a game.
+	 * 
+	 * @param nPlayers Number of players needed to start a game.
+	 */
+	public void setLobbySize (int nPlayers) {
+		if (this.isEmptyLobby()) {
+			NEEDED_PLAYERS = Math.min(2, nPlayers);
+		}
+		empty = false;
+	}
+
 	/**
 	 * Sets the name of this player.
 	 * 
@@ -76,7 +107,7 @@ public class Service implements CursedBoardGame {
 				turn.put(this.idClient, true);
 			} 
 		}
-		System.out.println(this.idClient + " " + this.state);
+		System.out.printf("%d %s (%d/%d)\n", this.idClient, this.state.toString(), players.size(), NEEDED_PLAYERS);
 		return this.state.getValue() > 1; // Higher than State.MATCHMAKING
 	}
 	
@@ -151,6 +182,7 @@ public class Service implements CursedBoardGame {
 	@Override
 	public void close () {
 		if (players.size() <= 1) {
+			empty = true;
 			players.clear();
 			turn.clear();
 		} else {
@@ -166,6 +198,20 @@ public class Service implements CursedBoardGame {
 			throw new AccionNoPermitida("position");
 		}
 		return players.get(this.idClient).getPosition();
+	}
+	
+	/**
+	 * Returns true if this is the last player in the lobby or this player has reached the limit cells.
+	 * 
+	 * @return true if this player has won. 
+	 */
+	public boolean win () {
+		try {
+			return players.size() == 1 || this.position() >= CELLS;
+		} catch (AccionNoPermitida e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 }
 
