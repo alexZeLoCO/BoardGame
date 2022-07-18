@@ -1,4 +1,4 @@
-S1: setName("napoleon")
+S1: setName("")
 S2: startGame()
 R1: OK!(true)
 S3: myTurn()
@@ -9,6 +9,102 @@ S5: show()
 R4: OK!("--------------------
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Normal 6	-	0/100
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 6	-	0/100
+--------------------")
+S6: play()
+R5: OK!(" has moved forward 1 positions
+ has dealt the card: "You now use a normal THREE-sided die"
+")
+S7: myTurn()
+R6: OK!(0)
+S8: show()
+R7: OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a normal THREE-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S9: myTurn()
+R8: OK!(0)
+S10: show()
+R9: OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a normal THREE-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S11: myTurn()
+R10: OK!(0)
+S12: show()
+R11: OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a normal THREE-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S13: myTurn()
+R12: OK!(1)
+S14: show()
+R13: OK!("--------------------
+ has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S15: play()
+R14: OK!(" has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+")
+S16: myTurn()
+R15: OK!(0)
+S17: show()
+R16: OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Cursed 8	-	2/100
+--------------------")
+S18: myTurn()
+R17: OK!(0)
+S19: show()
+R18: OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Cursed 8	-	2/100
+--------------------")
+S20: myTurn()
+R19: OK!(0)
+S21: show()
+R20: OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Cursed 8	-	2/100
+--------------------")
+S22: myTurn()
+R21: OK!(0)
+S23: show()
+R22: OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Cursed 8	-	2/100
 --------------------")

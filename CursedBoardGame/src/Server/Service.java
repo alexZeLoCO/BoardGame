@@ -56,7 +56,7 @@ public class Service implements CursedBoardGame {
 	 * @param name This player's name.
 	 */
 	public void setName (String name) {
-		players.put(this.idClient, new Player(name));
+		players.put(this.idClient, new Player(name.isBlank() ? String.format("Player %d", this.idClient) : name));
 		this.state = State.MATCHMAKING;
 	}
 

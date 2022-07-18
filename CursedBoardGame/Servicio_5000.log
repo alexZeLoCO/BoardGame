@@ -1,0 +1,291 @@
+S1(c1): setName("")
+S2(c1): startGame()
+S1(c1): OK!(false)
+S3(c1): startGame()
+S2(c1): OK!(false)
+S4(c1): startGame()
+S3(c1): OK!(false)
+S5(c1): startGame()
+S4(c1): OK!(false)
+S6(c1): startGame()
+S5(c1): OK!(false)
+S7(c1): startGame()
+S6(c1): OK!(false)
+S8(c1): startGame()
+S7(c1): OK!(false)
+S9(c1): startGame()
+S8(c1): OK!(false)
+S1(c2): setName("")
+S2(c2): startGame()
+S1(c2): OK!(true)
+S3(c2): myTurn()
+S2(c2): OK!(1)
+S4(c2): myTurn()
+S3(c2): OK!(1)
+S5(c2): show()
+S4(c2): OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 6	-	0/100
+--------------------")
+S10(c1): startGame()
+S9(c1): OK!(true)
+S11(c1): myTurn()
+S10(c1): OK!(0)
+S12(c1): myTurn()
+S11(c1): OK!(0)
+S13(c1): show()
+S12(c1): OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 6	-	0/100
+--------------------")
+S14(c1): myTurn()
+S13(c1): OK!(0)
+S15(c1): show()
+S14(c1): OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 6	-	0/100
+--------------------")
+S16(c1): myTurn()
+S15(c1): OK!(0)
+S17(c1): show()
+S16(c1): OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 6	-	0/100
+--------------------")
+S18(c1): myTurn()
+S17(c1): OK!(0)
+S19(c1): show()
+S18(c1): OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 6	-	0/100
+--------------------")
+S6(c2): play()
+S5(c2): OK!(" has moved forward 1 positions
+ has dealt the card: "You now use a normal THREE-sided die"
+")
+S7(c2): myTurn()
+S6(c2): OK!(0)
+S8(c2): show()
+S7(c2): OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a normal THREE-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S9(c2): myTurn()
+S8(c2): OK!(0)
+S10(c2): show()
+S9(c2): OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a normal THREE-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S20(c1): myTurn()
+S19(c1): OK!(1)
+S21(c1): show()
+S20(c1): OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a normal THREE-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S11(c2): myTurn()
+S10(c2): OK!(0)
+S12(c2): show()
+S11(c2): OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a normal THREE-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	0/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S22(c1): play()
+S21(c1): OK!(" has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+")
+S23(c1): myTurn()
+S22(c1): OK!(0)
+S24(c1): show()
+S23(c1): OK!("--------------------
+ has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S13(c2): myTurn()
+S12(c2): OK!(1)
+S14(c2): show()
+S13(c2): OK!("--------------------
+ has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S25(c1): myTurn()
+S24(c1): OK!(0)
+S26(c1): show()
+S25(c1): OK!("--------------------
+ has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S27(c1): myTurn()
+S26(c1): OK!(0)
+S28(c1): show()
+S27(c1): OK!("--------------------
+ has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S29(c1): myTurn()
+S28(c1): OK!(0)
+S30(c1): show()
+S29(c1): OK!("--------------------
+ has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S31(c1): myTurn()
+S30(c1): OK!(0)
+S32(c1): show()
+S31(c1): OK!("--------------------
+ has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S33(c1): myTurn()
+S32(c1): OK!(0)
+S34(c1): show()
+S33(c1): OK!("--------------------
+ has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S35(c1): myTurn()
+S34(c1): OK!(0)
+S36(c1): show()
+S35(c1): OK!("--------------------
+ has moved forward 5 positions
+ has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Normal 3	-	1/100
+--------------------")
+S15(c2): play()
+S14(c2): OK!(" has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+")
+S16(c2): myTurn()
+S15(c2): OK!(0)
+S17(c2): show()
+S16(c2): OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Cursed 8	-	2/100
+--------------------")
+S37(c1): myTurn()
+S36(c1): OK!(1)
+S38(c1): show()
+S37(c1): OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Cursed 8	-	2/100
+--------------------")
+S18(c2): myTurn()
+S17(c2): OK!(0)
+S19(c2): show()
+S18(c2): OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Cursed 8	-	2/100
+--------------------")
+S20(c2): myTurn()
+S19(c2): OK!(0)
+S21(c2): show()
+S20(c2): OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Cursed 8	-	2/100
+--------------------")
+S22(c2): myTurn()
+S21(c2): OK!(0)
+S23(c2): show()
+S22(c2): OK!("--------------------
+ has moved forward 1 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Normal 6	-	5/100
+2.	          	-	    Cursed 8	-	2/100
+--------------------")
+S39(c1): play()
+S38(c1): OK!(" has moved forward 6 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+")
+S40(c1): myTurn()
+S39(c1): OK!(10)
+S41(c1): show()
+S40(c1): OK!("--------------------
+ has moved forward 6 positions
+ has dealt the card: "You now use a cursed EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	          	-	    Cursed 8	-	11/100
+--------------------")
+S42(c1): play()
+S41(c1): OK!(" has moved forward 1 positions
+ has dealt the card: "Go backwards 10 positions"
+")
+S43(c1): position()
+S42(c1): OK!(2)
+S44(c1): EXIT!()
