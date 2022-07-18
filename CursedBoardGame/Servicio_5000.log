@@ -1,30 +1,39 @@
-S1(c1): setName("alexZeLoCO")
-S1(c1): OK!(null)
+S1(c1): setName("alex")
 S2(c1): startGame()
-S2(c1): OK!(true)
-S3(c1): startGame()
-S3(c1): Exception!(AccionNoPermitida)
-S4(c1): myTurn()
-S1(c2): setName("Napoelon")
-S1(c2): OK!(null)
+S1(c1): OK!(false)
+S1(c2): setName("napoleon")
 S2(c2): startGame()
-S2(c2): OK!(true)
-S3(c2): startGame()
-S3(c2): Exception!(AccionNoPermitida)
+S1(c2): OK!(true)
+S3(c2): myTurn()
+S2(c2): OK!(1)
 S4(c2): myTurn()
-S4(c1): OK!(1)
-S5(c1): myTurn()
-S5(c1): OK!(1)
-S6(c1): show()
-S6(c1): OK!("--------------------
+S3(c2): OK!(1)
+S5(c2): show()
+S4(c2): OK!("--------------------
 
-	Name	-	Die	-	Position
-1.	alexZeLoCO	-	Normal 6	-	0/100
-2.	Napoelon	-	Normal 6	-	0/100
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Normal 6	-	0/100
 --------------------")
-S7(c1): play()
-S7(c1): OK!("alexZeLoCO has moved forward 6 positions
-alexZeLoCO has dealt the card: "You now use a normal TWELVE-sided die"
-")
-S8(c1): myTurn()
-S4(c2): OK!(0)
+S3(c1): startGame()
+S2(c1): OK!(true)
+S4(c1): myTurn()
+S3(c1): OK!(0)
+S5(c1): myTurn()
+S4(c1): OK!(0)
+S6(c1): show()
+S5(c1): OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Normal 6	-	0/100
+--------------------")
+S7(c1): myTurn()
+S6(c1): OK!(0)
+S8(c1): show()
+S7(c1): OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Normal 6	-	0/100
+--------------------")

@@ -1,23 +1,25 @@
-S1: setName("alexZeLoCO")
+S1: setName("alex")
 S2: startGame()
-R1: OK!(null)
+R1: OK!(false)
 S3: startGame()
 R2: OK!(true)
 S4: myTurn()
-R3: Exception!(AccionNoPermitida)
+R3: OK!(0)
 S5: myTurn()
-R4: OK!(1)
+R4: OK!(0)
 S6: show()
-R5: OK!(1)
-S7: play()
-R6: OK!("--------------------
+R5: OK!("--------------------
 
-	Name	-	Die	-	Position
-1.	alexZeLoCO	-	Normal 6	-	0/100
-2.	Napoelon	-	Normal 6	-	0/100
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Normal 6	-	0/100
 --------------------")
-S8: myTurn()
-R7: OK!("alexZeLoCO has moved forward 6 positions
-alexZeLoCO has dealt the card: "You now use a normal TWELVE-sided die"
-")
-S9: show()
+S7: myTurn()
+R6: OK!(0)
+S8: show()
+R7: OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Normal 6	-	0/100
+--------------------")

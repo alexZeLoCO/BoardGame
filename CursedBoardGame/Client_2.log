@@ -1,10 +1,14 @@
-S1: setName("Napoelon")
+S1: setName("napoleon")
 S2: startGame()
-R1: OK!(null)
-S3: startGame()
-R2: OK!(true)
+R1: OK!(true)
+S3: myTurn()
+R2: OK!(1)
 S4: myTurn()
-R3: Exception!(AccionNoPermitida)
-S5: myTurn()
-R4: OK!(0)
-S6: show()
+R3: OK!(1)
+S5: show()
+R4: OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	      alex	-	    Normal 6	-	0/100
+2.	  napoleon	-	    Normal 6	-	0/100
+--------------------")

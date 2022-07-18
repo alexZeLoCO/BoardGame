@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/aleja/Documents/BoardGame/CursedBoardGame/POE_library.jar"/>
+	<classpathentry kind="lib" path="E:/Proyectos/BoardGame/CursedBoardGame/POE_library.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

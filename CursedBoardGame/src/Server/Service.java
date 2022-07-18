@@ -45,7 +45,6 @@ public class Service implements CursedBoardGame {
 	public Service (int idClient) {
 		this.idClient = idClient;
 		synchronized (mutex) {
-			players.put(idClient, new Player(String.format("Player%d", idClient)));
 			turn.put(idClient, false);
 		}
 		this.state = State.SETTING_NAME;
@@ -78,7 +77,7 @@ public class Service implements CursedBoardGame {
 			} 
 		}
 		System.out.println(this.idClient + " " + this.state);
-		return this.state.getValue() > 0;
+		return this.state.getValue() > 1; // Higher than State.MATCHMAKING
 	}
 	
 	@Override
@@ -137,11 +136,11 @@ public class Service implements CursedBoardGame {
 		for (int i = 0 ; i < 20 ; i++) {
 			s+="-";
 		}
-		s += String.format("\n%s\n\tName\t-\tDie\t-\tPosition\n", lastPlay);
+		s += String.format("\n%s\n\t%10s\t-\t%10s\t-\tPosition\n", lastPlay, "Name", "Die");
 		Iterator<Player> itr = players.values().iterator();
 		for (int i = 0 ; i < players.size() ; i++) {
 			p = itr.next();
-			s+=String.format("%d.\t%s\t-\t%s %d\t-\t%d/%d\n", i+1, p.getName(), p.getDie().isCursed() ? "Cursed" : "Normal", p.getDie().getSides(), p.getPosition(), CELLS);
+			s+=String.format("%d.\t%10s\t-\t%10s %d\t-\t%d/%d\n", i+1, p.getName(), p.getDie().isCursed() ? "Cursed" : "Normal", p.getDie().getSides(), p.getPosition(), CELLS);
 		}
 		for (int i = 0 ; i < 20 ; i++) {
 			s+="-";

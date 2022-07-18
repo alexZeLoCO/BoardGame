@@ -13,7 +13,7 @@ class Server {
 		com.addFunction("position", (o, x) -> ((Service)o).position());
 		com.addFunction("play", (o, x) -> ((Service)o).play());
 		com.addFunction("show", (o, x) -> ((Service)o).show());
-		com.addAction("setName", (o, x) -> ((Service)o).setName((String) x[0]));
+		com.addAction("setName", (o, x) -> ((Service)o).setName((String) x[0]), true);
 	}
 
 	public static void main(String[] args) {
