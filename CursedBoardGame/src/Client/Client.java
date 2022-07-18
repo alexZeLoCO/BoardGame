@@ -131,7 +131,8 @@ public class Client {
 			// crear el canal de comunicación y establecer la
 			// conexión con el servicio por defecto en localhost
 
-			com = new CommClient();
+			// com = new CommClient();
+			com = new CommClient("192.168.0.37", 5000);
 			// TODO: com = new CommClient(servidor.ddns.net, puerto); (?)
 
 			// activa el registro de mensajes del cliente
