@@ -1,0 +1,13 @@
+S1: startGame()
+R1: OK!(true)
+S2: myTurn()
+R2: OK!(1)
+S3: myTurn()
+R3: OK!(1)
+S4: show()
+R4: OK!("   Name - Die - Position
+1. Player1 - Normal 6 - 0/100
+2. Player2 - Normal 6 - 0/100
+3. Player3 - Normal 6 - 0/100
+")
+S5: play()

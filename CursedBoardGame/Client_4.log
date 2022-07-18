@@ -1,0 +1,49 @@
+S1: startGame()
+R1: OK!(true)
+S2: myTurn()
+R2: OK!(0)
+S3: myTurn()
+R3: OK!(0)
+S4: show()
+R4: OK!("   Name - Die - Position
+1. Player1 - Normal 6 - 0/100
+2. Player2 - Normal 6 - 0/100
+3. Player3 - Normal 6 - 6/100
+4. Player4 - Normal 6 - 0/100
+")
+S5: myTurn()
+R5: OK!(0)
+S6: show()
+R6: OK!("   Name - Die - Position
+1. Player1 - Normal 6 - 0/100
+2. Player2 - Normal 6 - 0/100
+3. Player3 - Normal 6 - 6/100
+4. Player4 - Normal 6 - 0/100
+")
+S7: myTurn()
+R7: OK!(0)
+S8: show()
+R8: OK!("   Name - Die - Position
+1. Player1 - Normal 6 - 0/100
+2. Player2 - Normal 6 - 0/100
+3. Player3 - Normal 6 - 6/100
+4. Player4 - Normal 6 - 0/100
+")
+S9: myTurn()
+R9: OK!(0)
+S10: show()
+R10: OK!("   Name - Die - Position
+1. Player1 - Normal 6 - 0/100
+2. Player2 - Normal 6 - 0/100
+3. Player3 - Normal 6 - 6/100
+4. Player4 - Normal 6 - 0/100
+")
+S11: myTurn()
+R11: OK!(0)
+S12: show()
+R12: OK!("   Name - Die - Position
+1. Player1 - Normal 6 - 0/100
+2. Player2 - Normal 6 - 0/100
+3. Player3 - Normal 6 - 6/100
+4. Player4 - Normal 6 - 0/100
+")
