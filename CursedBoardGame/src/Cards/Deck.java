@@ -142,8 +142,7 @@ public class Deck {
 		this.add(new Card("Go backwards 10 positions", (x) -> x.move(-10)));
 		this.add(new Card("You go back to the start", (x) -> x.move(x.getPosition()*(-1))));
 		this.add(new Card("Everybody goes back to the start", (x) -> Service.getPlayers().values().forEach((y) -> y.move(y.getPosition()*(-1)))));
-		// FIXME: Switch positions does not seem to work
-		this.add(new Card("You switch position with a random player", (x) -> x.switchPositionWith(Service.getPlayers().get(generator.nextInt()%Service.getPlayers().size()+1))));
+		this.add(new Card("You switch position with a random player", (x) -> x.switchPositionWith((Player) Service.getPlayers().values().toArray()[generator.nextInt(Service.getPlayers().size())])));
 	}
 	
 	/**

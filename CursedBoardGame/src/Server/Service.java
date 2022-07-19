@@ -35,7 +35,7 @@ public class Service implements CursedBoardGame {
 	private volatile static Map<Integer, Boolean> turn = new HashMap<Integer, Boolean>();
 	
 	private static Menu m = new Menu("Player selection", "$>");
-	
+
 	private static boolean first = true;
 	private static boolean empty = true;
 
@@ -47,6 +47,10 @@ public class Service implements CursedBoardGame {
 	private int idClient;
 	private State state;
 	
+	public Service () {
+		players.put(1, new Player("Alex"));
+	}
+
 	public Service (int idClient) {
 		this.idClient = idClient;
 		synchronized (mutex) {
