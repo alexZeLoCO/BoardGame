@@ -144,6 +144,17 @@ public class Player {
 		return String.format("%s has moved %s %d positions\n", this.name, dir, n);
 	}
 	
+	/**
+	 * Switches position with a given player
+	 * 
+	 * @param p Player to switch positions with
+	 */
+	public void switchPositionWith (Player p) {
+		int pos = p.getPosition();
+		p.move(this.getPosition() - pos);
+		this.move(pos - this.getPosition());
+	}
+
 	@Override
 	public String toString () {
 		return String.format("Player %s at %d (Die: %d)", this.name, this.getPosition(), this.currentDie.getSides());

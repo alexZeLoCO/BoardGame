@@ -3,7 +3,7 @@ package Dice;
 import java.util.Random;
 
 /**
- * Die Class
+ * Die Abstract Class
  * 
  * Represents a Die.
  * 
@@ -14,14 +14,13 @@ public class Die {
 
 	private final Random randomGenerator = new Random(System.currentTimeMillis()); // Random utility
 
-	private final Sides sides; // Sides of this Die
-	private boolean cursed; // True if this Die is cursed
+	private Sides sides; // Sides of this Die
 	
 	/**
 	 * Creates a new Die with 6 sides.
 	 */
 	public Die () {
-		this(Sides.SIX, false);
+		this(Sides.SIX);
 	}
 	
 	/**
@@ -30,18 +29,16 @@ public class Die {
 	 * @param s Number of sides.
 	 */
 	public Die (Sides s) {
-		this(s, false);
+		this.setSides(s);
 	}
 
 	/**
-	 * Creates a new Die.
+	 * Sets the number of sides in this Die
 	 * 
-	 * @param sides Number of sides.
-	 * @param cursed True if the die is cursed.
+	 * @param s Number of sides
 	 */
-	public Die (Sides s, boolean cursed) {
+	protected void setSides (Sides s) {
 		this.sides = s;
-		this.cursed = cursed;
 	}
 
 	/**
@@ -62,21 +59,12 @@ public class Die {
 	}
 	
 	/**
-	 * Returns true if the die is cursed.
-	 * 
-	 * @return True if cursed.
-	 */
-	public boolean isCursed () {
-		return this.cursed;
-	}
-
-	/**
 	 * Rolls this Dice.
 	 * 
 	 * @return Face that landed upwards.
 	 */
 	public int roll () {
-		return this.randomGenerator.nextInt(this.getSides()) + 1;
+		return this.randomGenerator.nextInt(1, this.getSides()+1);
 	}
 		
 }

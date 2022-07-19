@@ -141,12 +141,9 @@ public class Deck {
 		this.add(new Card("Go forward 10 positions", (x) -> x.move(10)));
 		this.add(new Card("Go backwards 10 positions", (x) -> x.move(-10)));
 		this.add(new Card("You go back to the start", (x) -> x.move(x.getPosition()*(-1))));
-		this.add(new Card("You switch position with a random player", (x) -> {
-			Player target = Service.getPlayers().get(generator.nextInt()%Service.getPlayers().size());
-			int target_new_position = x.getPosition();
-			x.move(target.getPosition()-x.getPosition());
-			target.move(target_new_position-target.getPosition());
-		}));
+		this.add(new Card("Everybody goes back to the start", (x) -> Service.getPlayers().values().forEach((y) -> y.move(y.getPosition()*(-1)))));
+		// FIXME: Switch positions does not seem to work
+		this.add(new Card("You switch position with a random player", (x) -> x.switchPositionWith(Service.getPlayers().get(generator.nextInt()%Service.getPlayers().size()+1))));
 	}
 	
 	/**
@@ -155,7 +152,7 @@ public class Deck {
 	private void makeTurnCards () {
 		for (int i = 1 ; i < 11 ; i++) {
 			int a = i;
-			this.add(new Card("You now lose " + i + "turns", (x) -> x.setSkipTurns(a)));
+			this.add(new Card("You now lose " + i + " turns", (x) -> x.setSkipTurns(a)));
 		}
 	}
 

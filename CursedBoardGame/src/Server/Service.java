@@ -4,7 +4,9 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import Dice.CursedDie;
 import Utils.Player;
+import Utils.Menu;
 import Common.AccionNoPermitida;
 import Common.CursedBoardGame;
 
@@ -31,6 +33,8 @@ public class Service implements CursedBoardGame {
 	private static int NEEDED_PLAYERS;
 	private volatile static Map<Integer, Player> players = new HashMap<Integer, Player>();
 	private volatile static Map<Integer, Boolean> turn = new HashMap<Integer, Boolean>();
+	
+	private static Menu m = new Menu("Player selection", "$>");
 	
 	private static boolean first = true;
 	private static boolean empty = true;
@@ -76,7 +80,7 @@ public class Service implements CursedBoardGame {
 	 */
 	public void setLobbySize (int nPlayers) {
 		if (this.isEmptyLobby()) {
-			NEEDED_PLAYERS = Math.min(2, nPlayers);
+			NEEDED_PLAYERS = Math.max(2, nPlayers);
 		}
 		empty = false;
 	}
@@ -88,6 +92,7 @@ public class Service implements CursedBoardGame {
 	 */
 	public void setName (String name) {
 		players.put(this.idClient, new Player(name.isBlank() ? String.format("Player %d", this.idClient) : name));
+		m.add(this.idClient, players.get(this.idClient).getName());
 		this.state = State.MATCHMAKING;
 	}
 
@@ -171,7 +176,7 @@ public class Service implements CursedBoardGame {
 		Iterator<Player> itr = players.values().iterator();
 		for (int i = 0 ; i < players.size() ; i++) {
 			p = itr.next();
-			s+=String.format("%d.\t%10s\t-\t%10s %d\t-\t%d/%d\n", i+1, p.getName(), p.getDie().isCursed() ? "Cursed" : "Normal", p.getDie().getSides(), p.getPosition(), CELLS);
+			s+=String.format("%d.\t%10s\t-\t%10s %d (x%d)\t-\t%d/%d\n", i+1, p.getName(), p.getDie() instanceof CursedDie ? "Cursed" : "Normal", p.getDie().getSides(), p.getNDice(), p.getPosition(), CELLS);
 		}
 		for (int i = 0 ; i < 20 ; i++) {
 			s+="-";
@@ -183,6 +188,7 @@ public class Service implements CursedBoardGame {
 	public void close () {
 		if (players.size() <= 1) {
 			empty = true;
+			first = true;
 			players.clear();
 			turn.clear();
 		} else {
@@ -212,6 +218,27 @@ public class Service implements CursedBoardGame {
 			e.printStackTrace();
 		}
 		return false;
+	}
+	
+	/**
+	 * Runs a Selection menu of all the players.
+	 * This is used so a player can choose other player. (Cards, etc...)
+	 * 
+	 * @return Index of the player chosen.
+	 */
+	public static int runPlayerSelection () {
+		return m.runSelection();
+	}
+	
+	/**
+	 * Switches position with player p
+	 * 
+	 * @param p Player to switch positions with
+	 * @return String representation of the switch
+	 */
+	public String playerSwitch (int p) {
+		players.get(this.idClient).switchPositionWith(players.get(p));
+		return String.format("%s has switched positions with %s", players.get(this.idClient).getName(), players.get(p).getName());
 	}
 }
 

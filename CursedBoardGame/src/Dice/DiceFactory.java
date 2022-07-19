@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class DiceFactory {
 
 	private static Map<Sides, Die> normalDice = new HashMap<Sides, Die>(); // Normal Dice Singleton
-	private static Map<Sides, Die> cursedDice = new HashMap<Sides, Die>(); // Cursed Dice Singleton
+	private static Map<Sides, CursedDie> cursedDice = new HashMap<Sides, CursedDie>(); // Cursed Dice Singleton
 
 	/**
 	 * Gets a normal Die. 
@@ -26,7 +26,7 @@ public class DiceFactory {
 	 */
 	private static Die getDie (Sides s) {
 		if (!normalDice.containsKey(s)) {
-			normalDice.put(s, new Die(s, false));
+			normalDice.put(s, new Die(s));
 		}
 		return normalDice.get(s);
 	}
@@ -38,9 +38,9 @@ public class DiceFactory {
 	 * 
 	 * @return Cursed s-sided Die.
 	 */
-	private static Die getCursedDie (Sides s) {
+	private static CursedDie getCursedDie (Sides s) {
 		if (!cursedDice.containsKey(s)) {
-			cursedDice.put(s, new Die(s, true));
+			cursedDice.put(s, new CursedDie(s));
 		}
 		return cursedDice.get(s);
 	}
@@ -53,7 +53,7 @@ public class DiceFactory {
 	 * @return Normal Die if d was cursed. Cursed Die if d was not cursed.
 	 */
 	public static Die curseSwitch (Die d) {
-		return d.isCursed() ? DiceFactory.getDie(d.getSidesEnum()) : DiceFactory.getCursedDie(d.getSidesEnum());
+		return d instanceof CursedDie ? DiceFactory.getDie(d.getSidesEnum()) : DiceFactory.getCursedDie(d.getSidesEnum());
 	}
 
 	/**

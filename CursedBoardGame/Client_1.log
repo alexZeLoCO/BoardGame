@@ -1,469 +1,2035 @@
 S1: isEmptyLobby()
 R1: OK!(true)
 S2: setLobbySize(2)
-S3: setName("alex")
+S3: setName("a")
 S4: startGame()
 R2: OK!(false)
 S5: startGame()
-R3: OK!(false)
-S6: startGame()
-R4: OK!(true)
+R3: OK!(true)
+S6: myTurn()
+R4: OK!(0)
 S7: myTurn()
 R5: OK!(0)
-S8: myTurn()
-R6: OK!(0)
-S9: show()
-R7: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S8: show()
+R6: OK!("--------------------
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S10: myTurn()
-R8: OK!(0)
-S11: show()
-R9: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S9: myTurn()
+R7: OK!(1)
+S10: show()
+R8: OK!("--------------------
+b has moved forward 4 positions
+b has dealt the card: "You now use a cursed EIGHT-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Cursed 8 (x1)	-	4/100
 --------------------")
+S11: play()
+R9: OK!("a has moved forward 2 positions
+a has dealt the card: "You now use a cursed TWENTY-sided die"
+")
 S12: myTurn()
 R10: OK!(0)
 S13: show()
 R11: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 2 positions
+a has dealt the card: "You now use a cursed TWENTY-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 20 (x1)	-	2/100
+2.	         b	-	    Cursed 8 (x1)	-	4/100
 --------------------")
 S14: myTurn()
 R12: OK!(0)
 S15: show()
 R13: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 2 positions
+a has dealt the card: "You now use a cursed TWENTY-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 20 (x1)	-	2/100
+2.	         b	-	    Cursed 8 (x1)	-	4/100
 --------------------")
 S16: myTurn()
-R14: OK!(0)
+R14: OK!(1)
 S17: show()
 R15: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+b has moved backwards -4 positions
+b has dealt the card: "Go forward 10 positions"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 20 (x1)	-	2/100
+2.	         b	-	    Cursed 8 (x1)	-	10/100
 --------------------")
-S18: myTurn()
-R16: OK!(0)
-S19: show()
-R17: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S18: play()
+R16: OK!("a has moved forward 6 positions
+a has dealt the card: "You now use a cursed THREE-sided die"
+")
+S19: myTurn()
+R17: OK!(0)
+S20: show()
+R18: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You now use a cursed THREE-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 3 (x1)	-	8/100
+2.	         b	-	    Cursed 8 (x1)	-	10/100
 --------------------")
-S20: myTurn()
-R18: OK!(0)
-S21: show()
-R19: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S21: myTurn()
+R19: OK!(0)
+S22: show()
+R20: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You now use a cursed THREE-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 3 (x1)	-	8/100
+2.	         b	-	    Cursed 8 (x1)	-	10/100
 --------------------")
-S22: myTurn()
-R20: OK!(0)
-S23: show()
-R21: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S23: myTurn()
+R21: OK!(0)
+S24: show()
+R22: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You now use a cursed THREE-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 3 (x1)	-	8/100
+2.	         b	-	    Cursed 8 (x1)	-	10/100
 --------------------")
-S24: myTurn()
-R22: OK!(0)
-S25: show()
-R23: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S25: myTurn()
+R23: OK!(1)
+S26: show()
+R24: OK!("--------------------
+b has moved forward 1 positions
+b has dealt the card: "You now lose 9 turns"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 3 (x1)	-	8/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S26: myTurn()
-R24: OK!(0)
-S27: show()
-R25: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
-
-	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
---------------------")
+S27: play()
+R25: OK!("a has moved forward 1 positions
+a has dealt the card: "You now use a cursed SIX-sided die"
+")
 S28: myTurn()
 R26: OK!(0)
 S29: show()
 R27: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 1 positions
+a has dealt the card: "You now use a cursed SIX-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 6 (x1)	-	9/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
 S30: myTurn()
 R28: OK!(0)
 S31: show()
 R29: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 1 positions
+a has dealt the card: "You now use a cursed SIX-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 6 (x1)	-	9/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
 S32: myTurn()
-R30: OK!(0)
+R30: OK!(1)
 S33: show()
 R31: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+You skip this turn!
+Skip turns left: 8
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Cursed 6 (x1)	-	9/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S34: myTurn()
-R32: OK!(0)
-S35: show()
-R33: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S34: play()
+R32: OK!("a has moved backwards -4 positions
+a has dealt the card: "You now use a normal THREE-sided die"
+")
+S35: myTurn()
+R33: OK!(0)
+S36: show()
+R34: OK!("--------------------
+a has moved backwards -4 positions
+a has dealt the card: "You now use a normal THREE-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 3 (x1)	-	5/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S36: myTurn()
-R34: OK!(0)
-S37: show()
-R35: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S37: myTurn()
+R35: OK!(0)
+S38: show()
+R36: OK!("--------------------
+a has moved backwards -4 positions
+a has dealt the card: "You now use a normal THREE-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 3 (x1)	-	5/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S38: myTurn()
-R36: OK!(0)
-S39: show()
-R37: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S39: myTurn()
+R37: OK!(0)
+S40: show()
+R38: OK!("--------------------
+a has moved backwards -4 positions
+a has dealt the card: "You now use a normal THREE-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 3 (x1)	-	5/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S40: myTurn()
-R38: OK!(0)
-S41: show()
-R39: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S41: myTurn()
+R39: OK!(1)
+S42: show()
+R40: OK!("--------------------
+You skip this turn!
+Skip turns left: 7
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 3 (x1)	-	5/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S42: myTurn()
-R40: OK!(0)
-S43: show()
-R41: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
-
-	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
---------------------")
+S43: play()
+R41: OK!("a has moved forward 2 positions
+a has dealt the card: "You now use a normal SIX-sided die"
+")
 S44: myTurn()
 R42: OK!(0)
 S45: show()
 R43: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 2 positions
+a has dealt the card: "You now use a normal SIX-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x1)	-	7/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
 S46: myTurn()
 R44: OK!(0)
 S47: show()
 R45: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 2 positions
+a has dealt the card: "You now use a normal SIX-sided die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x1)	-	7/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
 S48: myTurn()
-R46: OK!(0)
+R46: OK!(1)
 S49: show()
 R47: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+You skip this turn!
+Skip turns left: 6
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x1)	-	7/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S50: myTurn()
-R48: OK!(0)
-S51: show()
-R49: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S50: play()
+R48: OK!("a has moved forward 5 positions
+a has dealt the card: "Go backwards 10 positions"
+")
+S51: myTurn()
+R49: OK!(0)
+S52: show()
+R50: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "Go backwards 10 positions"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x1)	-	2/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S52: myTurn()
-R50: OK!(0)
-S53: show()
-R51: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S53: myTurn()
+R51: OK!(0)
+S54: show()
+R52: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "Go backwards 10 positions"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x1)	-	2/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S54: myTurn()
-R52: OK!(0)
-S55: show()
-R53: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S55: myTurn()
+R53: OK!(1)
+S56: show()
+R54: OK!("--------------------
+You skip this turn!
+Skip turns left: 5
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x1)	-	2/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S56: myTurn()
-R54: OK!(0)
-S57: show()
-R55: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
-
-	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
---------------------")
+S57: play()
+R55: OK!("a has moved forward 2 positions
+a has dealt the card: "You now have no die"
+")
 S58: myTurn()
 R56: OK!(0)
 S59: show()
 R57: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 2 positions
+a has dealt the card: "You now have no die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x0)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
 S60: myTurn()
 R58: OK!(0)
 S61: show()
 R59: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 2 positions
+a has dealt the card: "You now have no die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x0)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
 S62: myTurn()
 R60: OK!(0)
 S63: show()
 R61: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 2 positions
+a has dealt the card: "You now have no die"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x0)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
 S64: myTurn()
-R62: OK!(0)
+R62: OK!(1)
 S65: show()
 R63: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+You skip this turn!
+Skip turns left: 4
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x0)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S66: myTurn()
-R64: OK!(0)
-S67: show()
-R65: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S66: play()
+R64: OK!("a has moved forward 0 positions
+a has dealt the card: "You now have 3 dice"
+")
+S67: myTurn()
+R65: OK!(0)
+S68: show()
+R66: OK!("--------------------
+a has moved forward 0 positions
+a has dealt the card: "You now have 3 dice"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x3)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S68: myTurn()
-R66: OK!(0)
-S69: show()
-R67: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S69: myTurn()
+R67: OK!(0)
+S70: show()
+R68: OK!("--------------------
+a has moved forward 0 positions
+a has dealt the card: "You now have 3 dice"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x3)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S70: myTurn()
-R68: OK!(0)
-S71: show()
-R69: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S71: myTurn()
+R69: OK!(0)
+S72: show()
+R70: OK!("--------------------
+a has moved forward 0 positions
+a has dealt the card: "You now have 3 dice"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x3)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S72: myTurn()
-R70: OK!(0)
-S73: show()
-R71: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S73: myTurn()
+R71: OK!(0)
+S74: show()
+R72: OK!("--------------------
+a has moved forward 0 positions
+a has dealt the card: "You now have 3 dice"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x3)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S74: myTurn()
-R72: OK!(0)
-S75: show()
-R73: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S75: myTurn()
+R73: OK!(0)
+S76: show()
+R74: OK!("--------------------
+a has moved forward 0 positions
+a has dealt the card: "You now have 3 dice"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x3)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S76: myTurn()
-R74: OK!(0)
-S77: show()
-R75: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+S77: myTurn()
+R75: OK!(1)
+S78: show()
+R76: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x3)	-	4/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S78: myTurn()
-R76: OK!(0)
-S79: show()
-R77: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
-
-	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
---------------------")
+S79: play()
+R77: OK!("a has moved forward 11 positions
+a has dealt the card: "You now lose 6 turns"
+")
 S80: myTurn()
 R78: OK!(0)
 S81: show()
 R79: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 11 positions
+a has dealt the card: "You now lose 6 turns"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
 S82: myTurn()
 R80: OK!(0)
 S83: show()
 R81: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+a has moved forward 11 positions
+a has dealt the card: "You now lose 6 turns"
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
 S84: myTurn()
-R82: OK!(0)
+R82: OK!(1)
 S85: show()
 R83: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
+You skip this turn!
+Skip turns left: 2
 
 	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
 --------------------")
-S86: myTurn()
-R84: OK!(0)
-S87: show()
-R85: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
-
-	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
-2.	  napoleon	-	    Cursed 8	-	3/100
---------------------")
-S88: myTurn()
-R86: OK!(10)
-S89: show()
-R87: OK!("--------------------
-napoleon has moved forward 3 positions
-napoleon has dealt the card: "You now use a cursed EIGHT-sided die"
-
-	      Name	-	       Die	-	Position
-1.	      alex	-	    Normal 6	-	0/100
---------------------")
-S90: play()
-R88: OK!("alex has moved forward 6 positions
-alex has dealt the card: "Go forward 10 positions"
+S86: play()
+R84: OK!("You skip this turn!
+Skip turns left: 5
 ")
-S91: position()
-R89: OK!(16)
-S92: EXIT!()
+S87: myTurn()
+R85: OK!(0)
+S88: show()
+R86: OK!("--------------------
+You skip this turn!
+Skip turns left: 5
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
+--------------------")
+S89: myTurn()
+R87: OK!(0)
+S90: show()
+R88: OK!("--------------------
+You skip this turn!
+Skip turns left: 5
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
+--------------------")
+S91: myTurn()
+R89: OK!(1)
+S92: show()
+R90: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
+--------------------")
+S93: play()
+R91: OK!("You skip this turn!
+Skip turns left: 4
+")
+S94: myTurn()
+R92: OK!(0)
+S95: show()
+R93: OK!("--------------------
+You skip this turn!
+Skip turns left: 4
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
+--------------------")
+S96: myTurn()
+R94: OK!(0)
+S97: show()
+R95: OK!("--------------------
+You skip this turn!
+Skip turns left: 4
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
+--------------------")
+S98: myTurn()
+R96: OK!(1)
+S99: show()
+R97: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
+--------------------")
+S100: play()
+R98: OK!("You skip this turn!
+Skip turns left: 3
+")
+S101: myTurn()
+R99: OK!(0)
+S102: show()
+R100: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
+--------------------")
+S103: myTurn()
+R101: OK!(0)
+S104: show()
+R102: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Cursed 8 (x1)	-	11/100
+--------------------")
+S105: myTurn()
+R103: OK!(1)
+S106: show()
+R104: OK!("--------------------
+b has moved backwards -8 positions
+b has dealt the card: "Your die is now cursed/normal"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 8 (x1)	-	3/100
+--------------------")
+S107: play()
+R105: OK!("You skip this turn!
+Skip turns left: 2
+")
+S108: myTurn()
+R106: OK!(0)
+S109: show()
+R107: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 8 (x1)	-	3/100
+--------------------")
+S110: myTurn()
+R108: OK!(0)
+S111: show()
+R109: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 8 (x1)	-	3/100
+--------------------")
+S112: myTurn()
+R110: OK!(1)
+S113: show()
+R111: OK!("--------------------
+b has moved forward 6 positions
+b has dealt the card: "You now use a normal TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 10 (x1)	-	9/100
+--------------------")
+S114: play()
+R112: OK!("You skip this turn!
+Skip turns left: 1
+")
+S115: myTurn()
+R113: OK!(0)
+S116: show()
+R114: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 10 (x1)	-	9/100
+--------------------")
+S117: myTurn()
+R115: OK!(0)
+S118: show()
+R116: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 10 (x1)	-	9/100
+--------------------")
+S119: myTurn()
+R117: OK!(1)
+S120: show()
+R118: OK!("--------------------
+b has moved forward 1 positions
+b has dealt the card: "You now lose 8 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S121: play()
+R119: OK!("You skip this turn!
+Skip turns left: 0
+")
+S122: myTurn()
+R120: OK!(0)
+S123: show()
+R121: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S124: myTurn()
+R122: OK!(0)
+S125: show()
+R123: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S126: myTurn()
+R124: OK!(1)
+S127: show()
+R125: OK!("--------------------
+You skip this turn!
+Skip turns left: 7
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	15/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S128: play()
+R126: OK!("a has moved forward 8 positions
+a has dealt the card: "You now lose 5 turns"
+")
+S129: myTurn()
+R127: OK!(0)
+S130: show()
+R128: OK!("--------------------
+a has moved forward 8 positions
+a has dealt the card: "You now lose 5 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S131: myTurn()
+R129: OK!(0)
+S132: show()
+R130: OK!("--------------------
+a has moved forward 8 positions
+a has dealt the card: "You now lose 5 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S133: myTurn()
+R131: OK!(1)
+S134: show()
+R132: OK!("--------------------
+You skip this turn!
+Skip turns left: 6
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S135: play()
+R133: OK!("You skip this turn!
+Skip turns left: 4
+")
+S136: myTurn()
+R134: OK!(0)
+S137: show()
+R135: OK!("--------------------
+You skip this turn!
+Skip turns left: 4
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S138: myTurn()
+R136: OK!(0)
+S139: show()
+R137: OK!("--------------------
+You skip this turn!
+Skip turns left: 4
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S140: myTurn()
+R138: OK!(1)
+S141: show()
+R139: OK!("--------------------
+You skip this turn!
+Skip turns left: 5
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S142: play()
+R140: OK!("You skip this turn!
+Skip turns left: 3
+")
+S143: myTurn()
+R141: OK!(0)
+S144: show()
+R142: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S145: myTurn()
+R143: OK!(0)
+S146: show()
+R144: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S147: myTurn()
+R145: OK!(1)
+S148: show()
+R146: OK!("--------------------
+You skip this turn!
+Skip turns left: 4
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S149: play()
+R147: OK!("You skip this turn!
+Skip turns left: 2
+")
+S150: myTurn()
+R148: OK!(0)
+S151: show()
+R149: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S152: myTurn()
+R150: OK!(0)
+S153: show()
+R151: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S154: myTurn()
+R152: OK!(1)
+S155: show()
+R153: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S156: play()
+R154: OK!("You skip this turn!
+Skip turns left: 1
+")
+S157: myTurn()
+R155: OK!(0)
+S158: show()
+R156: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S159: myTurn()
+R157: OK!(0)
+S160: show()
+R158: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S161: myTurn()
+R159: OK!(1)
+S162: show()
+R160: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S163: play()
+R161: OK!("You skip this turn!
+Skip turns left: 0
+")
+S164: myTurn()
+R162: OK!(0)
+S165: show()
+R163: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S166: myTurn()
+R164: OK!(0)
+S167: show()
+R165: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S168: myTurn()
+R166: OK!(1)
+S169: show()
+R167: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	23/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S170: play()
+R168: OK!("a has moved forward 11 positions
+a has dealt the card: "You now lose 10 turns"
+")
+S171: myTurn()
+R169: OK!(0)
+S172: show()
+R170: OK!("--------------------
+a has moved forward 11 positions
+a has dealt the card: "You now lose 10 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S173: myTurn()
+R171: OK!(0)
+S174: show()
+R172: OK!("--------------------
+a has moved forward 11 positions
+a has dealt the card: "You now lose 10 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S175: myTurn()
+R173: OK!(1)
+S176: show()
+R174: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S177: play()
+R175: OK!("You skip this turn!
+Skip turns left: 9
+")
+S178: myTurn()
+R176: OK!(0)
+S179: show()
+R177: OK!("--------------------
+You skip this turn!
+Skip turns left: 9
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S180: myTurn()
+R178: OK!(0)
+S181: show()
+R179: OK!("--------------------
+You skip this turn!
+Skip turns left: 9
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 10 (x1)	-	10/100
+--------------------")
+S182: myTurn()
+R180: OK!(1)
+S183: show()
+R181: OK!("--------------------
+b has moved forward 5 positions
+b has dealt the card: "You now have 4 dice"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 10 (x4)	-	15/100
+--------------------")
+S184: play()
+R182: OK!("You skip this turn!
+Skip turns left: 8
+")
+S185: myTurn()
+R183: OK!(0)
+S186: show()
+R184: OK!("--------------------
+You skip this turn!
+Skip turns left: 8
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 10 (x4)	-	15/100
+--------------------")
+S187: myTurn()
+R185: OK!(0)
+S188: show()
+R186: OK!("--------------------
+You skip this turn!
+Skip turns left: 8
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 10 (x4)	-	15/100
+--------------------")
+S189: myTurn()
+R187: OK!(1)
+S190: show()
+R188: OK!("--------------------
+b has moved forward 14 positions
+b has dealt the card: "You now use a cursed TWELVE-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	29/100
+--------------------")
+S191: play()
+R189: OK!("You skip this turn!
+Skip turns left: 7
+")
+S192: myTurn()
+R190: OK!(0)
+S193: show()
+R191: OK!("--------------------
+You skip this turn!
+Skip turns left: 7
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	29/100
+--------------------")
+S194: myTurn()
+R192: OK!(0)
+S195: show()
+R193: OK!("--------------------
+You skip this turn!
+Skip turns left: 7
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	29/100
+--------------------")
+S196: myTurn()
+R194: OK!(0)
+S197: show()
+R195: OK!("--------------------
+You skip this turn!
+Skip turns left: 7
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	29/100
+--------------------")
+S198: myTurn()
+R196: OK!(0)
+S199: show()
+R197: OK!("--------------------
+You skip this turn!
+Skip turns left: 7
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	29/100
+--------------------")
+S200: myTurn()
+R198: OK!(1)
+S201: show()
+R199: OK!("--------------------
+b has moved forward 5 positions
+b has dealt the card: "You now lose 2 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	34/100
+--------------------")
+S202: play()
+R200: OK!("You skip this turn!
+Skip turns left: 6
+")
+S203: myTurn()
+R201: OK!(0)
+S204: show()
+R202: OK!("--------------------
+You skip this turn!
+Skip turns left: 6
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	34/100
+--------------------")
+S205: myTurn()
+R203: OK!(0)
+S206: show()
+R204: OK!("--------------------
+You skip this turn!
+Skip turns left: 6
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	34/100
+--------------------")
+S207: myTurn()
+R205: OK!(1)
+S208: show()
+R206: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	34/100
+--------------------")
+S209: play()
+R207: OK!("You skip this turn!
+Skip turns left: 5
+")
+S210: myTurn()
+R208: OK!(0)
+S211: show()
+R209: OK!("--------------------
+You skip this turn!
+Skip turns left: 5
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	34/100
+--------------------")
+S212: myTurn()
+R210: OK!(0)
+S213: show()
+R211: OK!("--------------------
+You skip this turn!
+Skip turns left: 5
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	34/100
+--------------------")
+S214: myTurn()
+R212: OK!(1)
+S215: show()
+R213: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	34/100
+--------------------")
+S216: play()
+R214: OK!("You skip this turn!
+Skip turns left: 4
+")
+S217: myTurn()
+R215: OK!(0)
+S218: show()
+R216: OK!("--------------------
+You skip this turn!
+Skip turns left: 4
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	34/100
+--------------------")
+S219: myTurn()
+R217: OK!(0)
+S220: show()
+R218: OK!("--------------------
+You skip this turn!
+Skip turns left: 4
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Cursed 12 (x4)	-	34/100
+--------------------")
+S221: myTurn()
+R219: OK!(1)
+S222: show()
+R220: OK!("--------------------
+b has moved backwards -28 positions
+b has dealt the card: "Your die has been reset"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S223: play()
+R221: OK!("You skip this turn!
+Skip turns left: 3
+")
+S224: myTurn()
+R222: OK!(0)
+S225: show()
+R223: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S226: myTurn()
+R224: OK!(0)
+S227: show()
+R225: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S228: myTurn()
+R226: OK!(0)
+S229: show()
+R227: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S230: myTurn()
+R228: OK!(0)
+S231: show()
+R229: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S232: myTurn()
+R230: OK!(0)
+S233: show()
+R231: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S234: myTurn()
+R232: OK!(0)
+S235: show()
+R233: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S236: myTurn()
+R234: OK!(0)
+S237: show()
+R235: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S238: myTurn()
+R236: OK!(0)
+S239: show()
+R237: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S240: myTurn()
+R238: OK!(0)
+S241: show()
+R239: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S242: myTurn()
+R240: OK!(0)
+S243: show()
+R241: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S244: myTurn()
+R242: OK!(0)
+S245: show()
+R243: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S246: myTurn()
+R244: OK!(0)
+S247: show()
+R245: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S248: myTurn()
+R246: OK!(0)
+S249: show()
+R247: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S250: myTurn()
+R248: OK!(0)
+S251: show()
+R249: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S252: myTurn()
+R250: OK!(0)
+S253: show()
+R251: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S254: myTurn()
+R252: OK!(0)
+S255: show()
+R253: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S256: myTurn()
+R254: OK!(0)
+S257: show()
+R255: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S258: myTurn()
+R256: OK!(0)
+S259: show()
+R257: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S260: myTurn()
+R258: OK!(0)
+S261: show()
+R259: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	6/100
+--------------------")
+S262: myTurn()
+R260: OK!(1)
+S263: show()
+R261: OK!("--------------------
+b has moved forward 13 positions
+b has dealt the card: "You now lose 7 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S264: play()
+R262: OK!("You skip this turn!
+Skip turns left: 2
+")
+S265: myTurn()
+R263: OK!(0)
+S266: show()
+R264: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S267: myTurn()
+R265: OK!(0)
+S268: show()
+R266: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S269: myTurn()
+R267: OK!(1)
+S270: show()
+R268: OK!("--------------------
+You skip this turn!
+Skip turns left: 6
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S271: play()
+R269: OK!("You skip this turn!
+Skip turns left: 1
+")
+S272: myTurn()
+R270: OK!(0)
+S273: show()
+R271: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S274: myTurn()
+R272: OK!(0)
+S275: show()
+R273: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S276: myTurn()
+R274: OK!(1)
+S277: show()
+R275: OK!("--------------------
+You skip this turn!
+Skip turns left: 5
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S278: play()
+R276: OK!("You skip this turn!
+Skip turns left: 0
+")
+S279: myTurn()
+R277: OK!(0)
+S280: show()
+R278: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S281: myTurn()
+R279: OK!(0)
+S282: show()
+R280: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S283: myTurn()
+R281: OK!(1)
+S284: show()
+R282: OK!("--------------------
+You skip this turn!
+Skip turns left: 4
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x3)	-	34/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S285: play()
+R283: OK!("a has moved forward 11 positions
+a has dealt the card: "You now have 2 dice"
+")
+S286: myTurn()
+R284: OK!(0)
+S287: show()
+R285: OK!("--------------------
+a has moved forward 11 positions
+a has dealt the card: "You now have 2 dice"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	45/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S288: myTurn()
+R286: OK!(0)
+S289: show()
+R287: OK!("--------------------
+a has moved forward 11 positions
+a has dealt the card: "You now have 2 dice"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	45/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S290: myTurn()
+R288: OK!(1)
+S291: show()
+R289: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	45/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S292: play()
+R290: OK!("a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+")
+S293: myTurn()
+R291: OK!(0)
+S294: show()
+R292: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S295: myTurn()
+R293: OK!(0)
+S296: show()
+R294: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S297: myTurn()
+R295: OK!(0)
+S298: show()
+R296: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S299: myTurn()
+R297: OK!(0)
+S300: show()
+R298: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S301: myTurn()
+R299: OK!(0)
+S302: show()
+R300: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S303: myTurn()
+R301: OK!(0)
+S304: show()
+R302: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S305: myTurn()
+R303: OK!(0)
+S306: show()
+R304: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S307: myTurn()
+R305: OK!(0)
+S308: show()
+R306: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S309: myTurn()
+R307: OK!(0)
+S310: show()
+R308: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S311: myTurn()
+R309: OK!(0)
+S312: show()
+R310: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S313: myTurn()
+R311: OK!(0)
+S314: show()
+R312: OK!("--------------------
+a has moved forward 6 positions
+a has dealt the card: "You switch position with a random player"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S315: myTurn()
+R313: OK!(1)
+S316: show()
+R314: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x2)	-	51/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S317: play()
+R315: OK!("a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+")
+S318: myTurn()
+R316: OK!(0)
+S319: show()
+R317: OK!("--------------------
+a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S320: myTurn()
+R318: OK!(0)
+S321: show()
+R319: OK!("--------------------
+a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S322: myTurn()
+R320: OK!(0)
+S323: show()
+R321: OK!("--------------------
+a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S324: myTurn()
+R322: OK!(0)
+S325: show()
+R323: OK!("--------------------
+a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S326: myTurn()
+R324: OK!(0)
+S327: show()
+R325: OK!("--------------------
+a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S328: myTurn()
+R326: OK!(0)
+S329: show()
+R327: OK!("--------------------
+a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S330: myTurn()
+R328: OK!(0)
+S331: show()
+R329: OK!("--------------------
+a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S332: myTurn()
+R330: OK!(0)
+S333: show()
+R331: OK!("--------------------
+a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S334: myTurn()
+R332: OK!(0)
+S335: show()
+R333: OK!("--------------------
+a has moved forward 9 positions
+a has dealt the card: "You now use a cursed TEN-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S336: myTurn()
+R334: OK!(1)
+S337: show()
+R335: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Cursed 10 (x2)	-	60/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S338: play()
+R336: OK!("a has moved forward 5 positions
+a has dealt the card: "You now use a normal EIGHT-sided die"
+")
+S339: myTurn()
+R337: OK!(0)
+S340: show()
+R338: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You now use a normal EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	65/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S341: myTurn()
+R339: OK!(0)
+S342: show()
+R340: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You now use a normal EIGHT-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	65/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S343: myTurn()
+R341: OK!(1)
+S344: show()
+R342: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	65/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S345: play()
+R343: OK!("a has moved forward 14 positions
+a has dealt the card: "You now lose 4 turns"
+")
+S346: myTurn()
+R344: OK!(0)
+S347: show()
+R345: OK!("--------------------
+a has moved forward 14 positions
+a has dealt the card: "You now lose 4 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S348: myTurn()
+R346: OK!(0)
+S349: show()
+R347: OK!("--------------------
+a has moved forward 14 positions
+a has dealt the card: "You now lose 4 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	19/100
+--------------------")
+S350: myTurn()
+R348: OK!(1)
+S351: show()
+R349: OK!("--------------------
+b has moved forward 12 positions
+b has dealt the card: "You now lose 3 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S352: play()
+R350: OK!("You skip this turn!
+Skip turns left: 3
+")
+S353: myTurn()
+R351: OK!(0)
+S354: show()
+R352: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S355: myTurn()
+R353: OK!(0)
+S356: show()
+R354: OK!("--------------------
+You skip this turn!
+Skip turns left: 3
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S357: myTurn()
+R355: OK!(1)
+S358: show()
+R356: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S359: play()
+R357: OK!("You skip this turn!
+Skip turns left: 2
+")
+S360: myTurn()
+R358: OK!(0)
+S361: show()
+R359: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S362: myTurn()
+R360: OK!(0)
+S363: show()
+R361: OK!("--------------------
+You skip this turn!
+Skip turns left: 2
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S364: myTurn()
+R362: OK!(1)
+S365: show()
+R363: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S366: play()
+R364: OK!("You skip this turn!
+Skip turns left: 1
+")
+S367: myTurn()
+R365: OK!(0)
+S368: show()
+R366: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S369: myTurn()
+R367: OK!(0)
+S370: show()
+R368: OK!("--------------------
+You skip this turn!
+Skip turns left: 1
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S371: myTurn()
+R369: OK!(1)
+S372: show()
+R370: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S373: play()
+R371: OK!("You skip this turn!
+Skip turns left: 0
+")
+S374: myTurn()
+R372: OK!(0)
+S375: show()
+R373: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S376: myTurn()
+R374: OK!(0)
+S377: show()
+R375: OK!("--------------------
+You skip this turn!
+Skip turns left: 0
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	79/100
+2.	         b	-	    Normal 6 (x4)	-	31/100
+--------------------")
+S378: myTurn()
+R376: OK!(1)
+S379: show()
+R377: OK!("--------------------
+b has moved forward 17 positions
+b has dealt the card: "Everybody goes back to the start"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	0/100
+2.	         b	-	    Normal 6 (x4)	-	0/100
+--------------------")
+S380: play()
+R378: OK!("a has moved forward 11 positions
+a has dealt the card: "You now lose 1 turns"
+")
+S381: myTurn()
+R379: OK!(0)
+S382: show()
+R380: OK!("--------------------
+a has moved forward 11 positions
+a has dealt the card: "You now lose 1 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	11/100
+2.	         b	-	    Normal 6 (x4)	-	0/100
+--------------------")
+S383: myTurn()
+R381: OK!(0)
+S384: show()
+R382: OK!("--------------------
+a has moved forward 11 positions
+a has dealt the card: "You now lose 1 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	11/100
+2.	         b	-	    Normal 6 (x4)	-	0/100
+--------------------")
+S385: myTurn()
+R383: OK!(0)
+S386: show()
+R384: OK!("--------------------
+a has moved forward 11 positions
+a has dealt the card: "You now lose 1 turns"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 8 (x2)	-	11/100
+2.	         b	-	    Normal 6 (x4)	-	0/100
+--------------------")

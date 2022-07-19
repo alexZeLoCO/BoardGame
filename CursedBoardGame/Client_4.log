@@ -1,2 +1,317 @@
 S1: isEmptyLobby()
-R1: OK!(true)
+R1: OK!(false)
+S2: setName("b")
+S3: startGame()
+R2: OK!(true)
+S4: myTurn()
+R3: OK!(1)
+S5: myTurn()
+R4: OK!(1)
+S6: show()
+R5: OK!("--------------------
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S7: play()
+R6: OK!("b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+")
+S8: myTurn()
+R7: OK!(0)
+S9: show()
+R8: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S10: myTurn()
+R9: OK!(0)
+S11: show()
+R10: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S12: myTurn()
+R11: OK!(0)
+S13: show()
+R12: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S14: myTurn()
+R13: OK!(0)
+S15: show()
+R14: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S16: myTurn()
+R15: OK!(0)
+S17: show()
+R16: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S18: myTurn()
+R17: OK!(0)
+S19: show()
+R18: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S20: myTurn()
+R19: OK!(0)
+S21: show()
+R20: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S22: myTurn()
+R21: OK!(0)
+S23: show()
+R22: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S24: myTurn()
+R23: OK!(0)
+S25: show()
+R24: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S26: myTurn()
+R25: OK!(0)
+S27: show()
+R26: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S28: myTurn()
+R27: OK!(0)
+S29: show()
+R28: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S30: myTurn()
+R29: OK!(0)
+S31: show()
+R30: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S32: myTurn()
+R31: OK!(0)
+S33: show()
+R32: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S34: myTurn()
+R33: OK!(0)
+S35: show()
+R34: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S36: myTurn()
+R35: OK!(0)
+S37: show()
+R36: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S38: myTurn()
+R37: OK!(0)
+S39: show()
+R38: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S40: myTurn()
+R39: OK!(0)
+S41: show()
+R40: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S42: myTurn()
+R41: OK!(0)
+S43: show()
+R42: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S44: myTurn()
+R43: OK!(0)
+S45: show()
+R44: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S46: myTurn()
+R45: OK!(0)
+S47: show()
+R46: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S48: myTurn()
+R47: OK!(0)
+S49: show()
+R48: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S50: myTurn()
+R49: OK!(0)
+S51: show()
+R50: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S52: myTurn()
+R51: OK!(0)
+S53: show()
+R52: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S54: myTurn()
+R53: OK!(0)
+S55: show()
+R54: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S56: myTurn()
+R55: OK!(0)
+S57: show()
+R56: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S58: myTurn()
+R57: OK!(0)
+S59: show()
+R58: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")
+S60: myTurn()
+R59: OK!(0)
+S61: show()
+R60: OK!("--------------------
+b has moved forward 3 positions
+b has dealt the card: "You now use a normal SIX-sided die"
+
+	      Name	-	       Die	-	Position
+1.	         a	-	    Normal 6 (x1)	-	0/100
+2.	         b	-	    Normal 6 (x1)	-	3/100
+--------------------")

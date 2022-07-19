@@ -15,17 +15,18 @@ public class CursedDie extends Die {
 	 * Makes a new 6-sided cursed die.
 	 */
 	public CursedDie () {
-		this(Sides.SIX);
+		super(Sides.SIX);
 	}
 	
 	/**
-	 * Makes a new cursed die.
+	 * Makes a new s-sided cursed die.
 	 * 
-	 * @param s Number of sides
+	 * @param s Number of sides.
 	 */
 	public CursedDie (Sides s) {
-		super(s, false);
+		super(s);
 	}
+	
 	
 	@Override
 	public int roll () {

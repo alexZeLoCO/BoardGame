@@ -2,13 +2,44 @@ package Client;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
+import java.util.Optional;
 import java.util.Scanner;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.IntSupplier;
 
 import Common.CursedBoardGame;
-
+import Server.Service;
 import lib.ChannelException;
 import lib.CommClient;
 import lib.ProtocolMessages;
+
+enum ReplyCode {
+	CHOOSE_PLAYER (1, () -> Service.runPlayerSelection());
+	
+	int v;
+	IntSupplier act;
+
+	ReplyCode (int v) {
+		this(v, null);
+	}
+	
+	ReplyCode (int v, IntSupplier act) {
+		this.v = v;
+		this.act = act;
+	}
+	
+	int getV () {
+		return this.v;
+	}
+	
+	Optional<Integer> run () {
+		if (this.act != null) {
+			return Optional.ofNullable(this.act.getAsInt());
+		}
+		return Optional.empty();
+	}
+}
 
 /**
  * Client Class.
@@ -107,7 +138,29 @@ public class Client {
 	public static void play () throws IOException, ChannelException {
 		com.sendEvent(new ProtocolMessages("play"));
 		try {
-			System.out.printf("%s\n\n", com.processReply(com.waitReply()).toString());
+			Object o = (Object) com.processReply(com.waitReply());
+			if (o instanceof ReplyCode) {
+				Optional<Integer> idx = ((ReplyCode)o).run();
+				replyPlayerSwitch(idx.orElse(null));
+			} else {
+				System.out.printf("%s\n\n", o.toString());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Replies to the server with a player selection
+	 * 
+	 * @param idx Index of the player selected or null if none was selected
+	 * @throws IOException
+	 * @throws ChannelException
+	 */
+	public static void replyPlayerSwitch (int idx) throws IOException, ChannelException {
+		com.sendEvent(new ProtocolMessages("playerSwitch", idx));
+		try {
+			System.out.printf("%s\n\n", com.processReply(com.waitReply()));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -142,8 +195,13 @@ public class Client {
 		}
 	}
 	
+	/**
+	 * Checks if this player has won
+	 * 
+	 * @return True if this player has won
+	 */
 	public static boolean win () throws IOException, ChannelException {
-		com.sendEvent(new ProtocolMessages("end"));
+		com.sendEvent(new ProtocolMessages("win"));
 		try {
 			return (boolean) com.processReply(com.waitReply());
 		} catch (Exception e) {
@@ -196,7 +254,7 @@ public class Client {
 				} while (n == 0); // esperando el turno
 
 				System.out.println("Enter to roll the dice!");
-				// scanner.nextLine();
+				scanner.nextLine();
 				play();
 
 			}
