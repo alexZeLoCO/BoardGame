@@ -1,8 +1,11 @@
 package Utils;
 
+import java.util.ArrayList;
+
 import Cards.Deck;
 import Cards.Card;
 import Dice.Die;
+import Items.Buyable;
 
 /**
  * Player Class.
@@ -19,6 +22,8 @@ public class Player {
 	private Die currentDie; // Current die of the player
 	private int nDie; // Number of dice
 	private int skipTurns; // Number of turns to skip
+	private ArrayList<Buyable> items; // Buyables of this player
+	private double money; // Money
 	
 	/**
 	 * Creates a new player with a name.
@@ -29,6 +34,8 @@ public class Player {
 		this.currentDie = new Die();
 		this.nDie = 1;
 		this.skipTurns = 0;
+		this.items = new ArrayList<Buyable> ();
+		this.money = 0;
 	}
 	
 	/**
@@ -100,6 +107,15 @@ public class Player {
 	public String getName () {
 		return this.name;
 	}
+	
+	/**
+	 * Return the player's money.
+	 * 
+	 * @return Player's money.
+	 */
+	public double getMoney () {
+		return this.money;
+	}
 
 	/**
 	 * Rolls this player's dice.
@@ -117,16 +133,18 @@ public class Player {
 	/**
 	 * Plays a turn of this player.
 	 */
-	public String play () {
+	public ServerReply play () {
 		String out = "";
 		if (this.getSkipTurns() > 0) {
-			return String.format("You skip this turn!\nSkip turns left: %d\n", --this.skipTurns);
+			return new ServerReply (ReplyCode.NONE, String.format("You skip this turn!\nSkip turns left: %d\n", --this.skipTurns));
 		}
 		out = this.move(this.roll());
 		Card c = Deck.getInstance().drawCard();
 		out += String.format("%s has dealt the card: \"%s\"\n", this.getName(), c.getDescription());
-		c.accept(this);
-		return out;
+		if (c.getReplyCode().equals(ReplyCode.NONE)) {
+			c.accept(this);
+		}
+		return new ServerReply(c.getReplyCode(), out);
 	}
 
 	/**
@@ -145,6 +163,15 @@ public class Player {
 	}
 	
 	/**
+	 * Gives x$ to this player
+	 * 
+	 * @param x $ to be added
+	 */
+	public void earn (double x) {
+		this.money+=x;
+	}
+	
+	/**
 	 * Switches position with a given player
 	 * 
 	 * @param p Player to switch positions with
@@ -153,6 +180,23 @@ public class Player {
 		int pos = p.getPosition();
 		p.move(this.getPosition() - pos);
 		this.move(pos - this.getPosition());
+	}
+	
+	/**
+	 * Adds an item
+	 * 
+	 * @param b Item to be added
+	 */
+	public void buy (Buyable b) {
+		this.money-=b.getCost();
+		this.items.add(b);
+	}
+
+	/**
+	 * Uses a buyable
+	 */
+	public void use () {
+		
 	}
 
 	@Override

@@ -3,9 +3,21 @@ R1: OK!(true)
 S2: setLobbySize(2)
 S3: setName("a")
 S4: startGame()
-R2: OK!(true)
-S5: myTurn()
-R3: OK!(10)
-S6: win()
+R2: OK!(false)
+S5: startGame()
+R3: OK!(false)
+S6: startGame()
 R4: OK!(true)
-S7: EXIT!()
+S7: myTurn()
+R5: OK!(1)
+S8: myTurn()
+R6: OK!(1)
+S9: show()
+R7: OK!("--------------------
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S10: play()
+R8: OK!(Utils.ServerReply@279ad2e3)

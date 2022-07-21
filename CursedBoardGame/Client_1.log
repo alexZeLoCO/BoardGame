@@ -1,164 +1,72 @@
 S1: isEmptyLobby()
 R1: OK!(true)
 S2: setLobbySize(2)
-S3: setName("a")
+S3: setName("")
 S4: startGame()
 R2: OK!(false)
 S5: startGame()
-R3: OK!(false)
-S6: startGame()
-R4: OK!(true)
+R3: OK!(true)
+S6: myTurn()
+R4: OK!(0)
 S7: myTurn()
 R5: OK!(0)
-S8: myTurn()
-R6: OK!(0)
-S9: show()
-R7: OK!("--------------------
+S8: show()
+R6: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
+	           Name	-	            Die	-	Position
+1.	  Player 1 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	  Player 2 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S10: myTurn()
-R8: OK!(0)
-S11: show()
-R9: OK!("--------------------
+S9: myTurn()
+R7: OK!(0)
+S10: show()
+R8: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
+	           Name	-	            Die	-	Position
+1.	  Player 1 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	  Player 2 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S12: myTurn()
-R10: OK!(0)
-S13: show()
-R11: OK!("--------------------
+S11: myTurn()
+R9: OK!(0)
+S12: show()
+R10: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
+	           Name	-	            Die	-	Position
+1.	  Player 1 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	  Player 2 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S14: myTurn()
-R12: OK!(0)
-S15: show()
-R13: OK!("--------------------
+S13: myTurn()
+R11: OK!(0)
+S14: show()
+R12: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
+	           Name	-	            Die	-	Position
+1.	  Player 1 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	  Player 2 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S16: myTurn()
-R14: OK!(0)
-S17: show()
-R15: OK!("--------------------
+S15: myTurn()
+R13: OK!(0)
+S16: show()
+R14: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
+	           Name	-	            Die	-	Position
+1.	  Player 1 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	  Player 2 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S18: myTurn()
-R16: OK!(1)
-S19: show()
-R17: OK!("--------------------
-b has moved forward 5 positions
-b has dealt the card: "Go forward 10 positions"
+S17: myTurn()
+R15: OK!(0)
+S18: show()
+R16: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	15/100
+	           Name	-	            Die	-	Position
+1.	  Player 1 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	  Player 2 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S20: play()
-R18: OK!("a has moved forward 3 positions
-a has dealt the card: "Go backwards 10 positions"
-")
-S21: myTurn()
-R19: OK!(0)
-S22: show()
-R20: OK!("--------------------
-a has moved forward 3 positions
-a has dealt the card: "Go backwards 10 positions"
+S19: myTurn()
+R17: OK!(10)
+S20: show()
+R18: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	15/100
---------------------")
-S23: myTurn()
-R21: OK!(0)
-S24: show()
-R22: OK!("--------------------
-a has moved forward 3 positions
-a has dealt the card: "Go backwards 10 positions"
-
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	15/100
---------------------")
-S25: myTurn()
-R23: OK!(0)
-S26: show()
-R24: OK!("--------------------
-a has moved forward 3 positions
-a has dealt the card: "Go backwards 10 positions"
-
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	15/100
---------------------")
-S27: myTurn()
-R25: OK!(1)
-S28: show()
-R26: OK!("--------------------
-b has moved forward 1 positions
-b has dealt the card: "You go back to the start"
-
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
---------------------")
-S29: play()
-R27: OK!("a has moved forward 4 positions
-a has dealt the card: "Everybody goes back to the start"
-")
-S30: myTurn()
-R28: OK!(0)
-S31: show()
-R29: OK!("--------------------
-a has moved forward 4 positions
-a has dealt the card: "Everybody goes back to the start"
-
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
---------------------")
-S32: myTurn()
-R30: OK!(0)
-S33: show()
-R31: OK!("--------------------
-a has moved forward 4 positions
-a has dealt the card: "Everybody goes back to the start"
-
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
---------------------")
-S34: myTurn()
-R32: OK!(0)
-S35: show()
-R33: OK!("--------------------
-a has moved forward 4 positions
-a has dealt the card: "Everybody goes back to the start"
-
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
---------------------")
-S36: myTurn()
-R34: OK!(1)
-S37: show()
-R35: OK!("--------------------
-b has moved forward 5 positions
-b has dealt the card: "You switch position with a random player"
-
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	5/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
+	           Name	-	            Die	-	Position
+1.	  Player 1 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")

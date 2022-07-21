@@ -1,5 +1,7 @@
 package Common;
 
+import Utils.ServerReply;
+
 /**
  * CursedBoardGame Interface.
  * 
@@ -35,7 +37,7 @@ public interface CursedBoardGame extends lib.DefaultService {
 	 * 
 	 * @return Description of dealt card.
 	 */
-	String play () throws AccionNoPermitida;
+	ServerReply play () throws AccionNoPermitida;
 	
 	/**
 	 * Returns this player's position.

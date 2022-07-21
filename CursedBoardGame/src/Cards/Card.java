@@ -3,6 +3,7 @@ package Cards;
 import java.util.function.Consumer;
 
 import Utils.Player;
+import Utils.ReplyCode;
 
 /**
  * Card class.
@@ -26,12 +27,27 @@ public class Card {
 	 */
 	private final Consumer<Player> action;
 	
+	// Reply Code of this card
+	private final ReplyCode code;
+	
 	/**
 	 * Creates a new card.
 	 * @param description Description of the card.
 	 * @param action Action to be performed when the card is drew.
 	 */
 	public Card (String description, Consumer<Player> action) {
+		this(ReplyCode.NONE, description, action);
+	}
+	
+	/**
+	 * Creates a new card.
+	 * 
+	 * @param code Reply Code.
+	 * @param description Description of the card.
+	 * @param action Action to be performed when the card is drew.
+	 */
+	public Card (ReplyCode code, String description, Consumer<Player> action) {
+		this.code = code;
 		this.description = description;
 		this.action = action;
 	}
@@ -43,6 +59,15 @@ public class Card {
 	 */
 	public String getDescription () {
 		return this.description;
+	}
+	
+	/**
+	 * Returns this card's Reply Code
+	 * 
+	 * @return Reply Code
+	 */
+	public ReplyCode getReplyCode () {
+		return this.code;
 	}
 
 	/**

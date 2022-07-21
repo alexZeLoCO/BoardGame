@@ -6,6 +6,8 @@ import java.util.Iterator;
 
 import Dice.CursedDie;
 import Utils.Player;
+import Utils.ReplyCode;
+import Utils.ServerReply;
 import Utils.Menu;
 import Common.AccionNoPermitida;
 import Common.CursedBoardGame;
@@ -34,7 +36,7 @@ public class Service implements CursedBoardGame {
 	private volatile static Map<Integer, Player> players = new HashMap<Integer, Player>();
 	private volatile static Map<Integer, Boolean> turn = new HashMap<Integer, Boolean>();
 	
-	private static Menu m = new Menu("Player selection", "$>");
+	private volatile static Menu m = new Menu("Player selection", "p> ");
 
 	private static boolean first = true;
 	private static boolean empty = true;
@@ -47,16 +49,28 @@ public class Service implements CursedBoardGame {
 	private int idClient;
 	private State state;
 	
-	public Service () {
-		players.put(1, new Player("Alex"));
-	}
-
 	public Service (int idClient) {
 		this.idClient = idClient;
 		synchronized (mutex) {
 			turn.put(idClient, false);
 		}
 		this.state = State.SETTING_NAME;
+	}
+	
+	/**
+	 * Resets the Service for a new group of clients.
+	 */
+	private void reset () {
+		synchronized (mutex) {
+			players.clear();
+			turn.clear();
+			m = new Menu("Player slection", "p>");
+			lastPlay = "";
+			round = 0;
+			first = true;
+			empty = true;
+		}
+		state = null;
 	}
 	
 	/**
@@ -83,10 +97,12 @@ public class Service implements CursedBoardGame {
 	 * @param nPlayers Number of players needed to start a game.
 	 */
 	public void setLobbySize (int nPlayers) {
-		if (this.isEmptyLobby()) {
-			NEEDED_PLAYERS = Math.max(2, nPlayers);
+		synchronized (mutex) {
+			if (this.isEmptyLobby()) {
+				NEEDED_PLAYERS = Math.max(2, nPlayers);
+				empty = false;
+			}
 		}
-		empty = false;
 	}
 
 	/**
@@ -95,8 +111,12 @@ public class Service implements CursedBoardGame {
 	 * @param name This player's name.
 	 */
 	public void setName (String name) {
-		players.put(this.idClient, new Player(name.isBlank() ? String.format("Player %d", this.idClient) : name));
-		m.add(this.idClient, players.get(this.idClient).getName());
+		synchronized (mutex) {
+			players.put(this.idClient, new Player(name.isBlank() ? String.format("Player %d", this.idClient) : name));
+			turn.put(this.idClient, false);
+			m.add(this.idClient, players.get(this.idClient).getName());
+			System.out.printf("New player added (%s)\n", players.get(this.idClient).getName());
+		}
 		this.state = State.MATCHMAKING;
 	}
 
@@ -105,9 +125,13 @@ public class Service implements CursedBoardGame {
 		if (this.state != State.MATCHMAKING) {
 			throw new AccionNoPermitida ("start game");
 		}
-		if (!first) {
+		boolean f;
+		synchronized (mutex) {
+			f = first;
+		}
+		if (!f) {
+			System.out.println("A player is already in lobby");
 			this.state = State.STANDBY;
-			turn.put(this.idClient, false);
 		}
 		synchronized (mutex) {
 			if (first && players.size() == NEEDED_PLAYERS) {
@@ -126,12 +150,14 @@ public class Service implements CursedBoardGame {
 			throw new AccionNoPermitida("my turn");
 		}
 		if (players.size() == 1) {
+			System.out.printf("%s\n", players.toString());
 			this.state = State.END_GAME;
 			System.out.println(this.state);
 			return this.state.getValue();
 		}
 		for (Player p : players.values()) {
 			if (p.getPosition() >= CELLS) {
+				System.out.printf("Player %s has reached the goal\n", p.getName());
 				this.state = State.END_GAME;
 				return this.state.getValue();
 			}
@@ -142,6 +168,7 @@ public class Service implements CursedBoardGame {
 					this.state = State.PLAYING;
 				}
 			}
+			System.out.printf("Turns: %s\nPlayer %s is %s\n", turn.toString(), players.get(this.idClient).getName(), this.state);
 		}
 		return this.state == State.PLAYING ? 1 : 0;
 	}
@@ -153,16 +180,20 @@ public class Service implements CursedBoardGame {
 		this.state = State.STANDBY;
 		synchronized (mutex) {
 			turn.put(this.idClient, false);
-			turn.put(round++%(players.size())+1, true);
-			System.out.printf("U: %s\n", turn.toString());
+			turn.put(((Integer) turn.keySet().toArray()[round++%turn.size()]), true);
 		}
+		System.out.printf("U: %s\n", turn.toString());
 	}
 	
 	@Override
-	public String play () {
-		lastPlay = players.get(this.idClient).play();
-		updateState();
-		return lastPlay;
+	public ServerReply play () {
+		System.out.printf("Player %s is playing.\n", players.get(this.idClient).getName());
+		ServerReply reply = players.get(this.idClient).play();
+		lastPlay = reply.getText();
+		if (reply.getCode().equals(ReplyCode.NONE)) { 
+			updateState();
+		}
+		return reply;
 	}
 	
 	/**
@@ -176,11 +207,11 @@ public class Service implements CursedBoardGame {
 		for (int i = 0 ; i < 20 ; i++) {
 			s+="-";
 		}
-		s += String.format("\n%s\n\t%10s\t-\t%10s\t-\tPosition\n", lastPlay, "Name", "Die");
+		s += String.format("\n%s\n\t%15s\t-\t%15s\t-\tPosition\n", lastPlay, "Name", "Die");
 		Iterator<Player> itr = players.values().iterator();
 		for (int i = 0 ; i < players.size() ; i++) {
 			p = itr.next();
-			s+=String.format("%d.\t%10s\t-\t%10s %d (x%d)\t-\t%d/%d\n", i+1, p.getName(), p.getDie() instanceof CursedDie ? "Cursed" : "Normal", p.getDie().getSides(), p.getNDice(), p.getPosition(), CELLS);
+			s+=String.format("%d.\t%10s %.2f$\t-\t%10s %d (x%d)\t-\t%d/%d\n", i+1, p.getName(), p.getMoney(), p.getDie() instanceof CursedDie ? "Cursed" : "Normal", p.getDie().getSides(), p.getNDice(), p.getPosition(), CELLS);
 		}
 		for (int i = 0 ; i < 20 ; i++) {
 			s+="-";
@@ -191,13 +222,13 @@ public class Service implements CursedBoardGame {
 	@Override
 	public void close () {
 		if (players.size() <= 1) {
-			empty = true;
-			first = true;
-			players.clear();
-			turn.clear();
+			System.out.println("Closing Service.");
+			reset();
 		} else {
+			System.out.println("Removing user from Service.");
 			players.remove(this.idClient);
 			turn.remove(this.idClient);
+			m.remove(this.idClient);
 		}
 		CursedBoardGame.super.close();
 	}
@@ -231,9 +262,19 @@ public class Service implements CursedBoardGame {
 	 * @return Index of the player chosen.
 	 */
 	public static int runPlayerSelection () {
-		return m.runSelection();
+		synchronized (mutex) {
+			return m.runSelection();
+		}
 	}
 	
+	public ServerReply reply (ServerReply original, int reply) {
+		ServerReply out = null;
+		if (original.getCode().equals(ReplyCode.CHOOSE_PLAYER)) {
+			out = new ServerReply(ReplyCode.NONE, String.format("%s\n%s", lastPlay, this.playerSwitch(reply)));
+		}
+		return out;
+	}
+
 	/**
 	 * Switches position with player p
 	 * 

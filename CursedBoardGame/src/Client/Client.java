@@ -4,42 +4,15 @@ import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.Optional;
 import java.util.Scanner;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 import java.util.function.IntSupplier;
 
 import Common.CursedBoardGame;
 import Server.Service;
+import Utils.ReplyCode;
+import Utils.ServerReply;
 import lib.ChannelException;
 import lib.CommClient;
 import lib.ProtocolMessages;
-
-enum ReplyCode {
-	CHOOSE_PLAYER (1, () -> Service.runPlayerSelection());
-	
-	int v;
-	IntSupplier act;
-
-	ReplyCode (int v) {
-		this(v, null);
-	}
-	
-	ReplyCode (int v, IntSupplier act) {
-		this.v = v;
-		this.act = act;
-	}
-	
-	int getV () {
-		return this.v;
-	}
-	
-	Optional<Integer> run () {
-		if (this.act != null) {
-			return Optional.ofNullable(this.act.getAsInt());
-		}
-		return Optional.empty();
-	}
-}
 
 /**
  * Client Class.
@@ -138,12 +111,10 @@ public class Client {
 	public static void play () throws IOException, ChannelException {
 		com.sendEvent(new ProtocolMessages("play"));
 		try {
-			Object o = (Object) com.processReply(com.waitReply());
-			if (o instanceof ReplyCode) {
-				Optional<Integer> idx = ((ReplyCode)o).run();
-				replyPlayerSwitch(idx.orElse(null));
-			} else {
-				System.out.printf("%s\n\n", o.toString());
+			ServerReply o = (ServerReply) com.processReply(com.waitReply());
+			System.out.printf("%s\n\n", o.getText());
+			if (!o.getCode().equals(ReplyCode.NONE)) {
+				com.sendEvent(new ProtocolMessages("reply", o, o.run()));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

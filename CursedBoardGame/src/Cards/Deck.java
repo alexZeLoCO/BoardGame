@@ -6,6 +6,7 @@ import java.util.Random;
 import Dice.Sides;
 import Server.Service;
 import Utils.Player;
+import Utils.ReplyCode;
 import Dice.DiceFactory;
 
 /**
@@ -159,9 +160,26 @@ public class Deck {
 	 * Adds all the Cards.
 	 */
 	public void makeDeck () {
+		/*
 		this.makeDieCards();
 		this.makePositionCards();
 		this.makeTurnCards();
+		for (int i = 0 ; i < 100 ; i++) {
+			double d = function(generator.nextDouble());
+			this.add(new Card(String.format("You earn %.2f$", d), (x) -> x.earn(Double.parseDouble(String.format("%.2f", d)))));
+		}
+		*/
+		this.add(new Card(ReplyCode.CHOOSE_PLAYER, "You switch position with a random player", (x) -> x.switchPositionWith((Player) Service.getPlayers().values().toArray()[generator.nextInt(Service.getPlayers().size())])));
+	}
+
+	/**
+	 * Returns the money acquired
+	 * 
+	 * @param d Percentage [0, 1]
+	 * @return $
+	 */
+	public double function (double d) {
+		return Math.pow(d, Math.pow(Math.E, d+1))*50;
 	}
 
 	/**

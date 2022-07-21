@@ -1,0 +1,12 @@
+FIXME:
+La clase Service tiene un Menu. (private volatile static Menu m;)
+El Menu contiene los nombres de los Client que se conecten indexados por un int.
+Ejemplo:
+	TituloMenu
+	1. Client_1
+	2. Client_2
+	prompt: 
+
+Al conectarse un Client, se anexa una extrada en el Menu con su idx y nombre.
+Si el Menu se imprime desde el Service, se muestra correctamente (Ver terminal del Server y metodo one() en Service)
+Al llamar al metodo static runSelection() desde el Client, el menu esta vacio.

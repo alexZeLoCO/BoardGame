@@ -4,314 +4,891 @@ S2: setName("b")
 S3: startGame()
 R2: OK!(true)
 S4: myTurn()
-R3: OK!(1)
+R3: OK!(0)
 S5: myTurn()
-R4: OK!(1)
+R4: OK!(0)
 S6: show()
 R5: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	0/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S7: play()
-R6: OK!("b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
-")
-S8: myTurn()
-R7: OK!(0)
-S9: show()
-R8: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S7: myTurn()
+R6: OK!(0)
+S8: show()
+R7: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S10: myTurn()
-R9: OK!(0)
-S11: show()
-R10: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S9: myTurn()
+R8: OK!(0)
+S10: show()
+R9: OK!("--------------------
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	0/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S12: myTurn()
-R11: OK!(0)
-S13: show()
-R12: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S11: myTurn()
+R10: OK!(0)
+S12: show()
+R11: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S14: myTurn()
-R13: OK!(0)
-S15: show()
-R14: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S13: myTurn()
+R12: OK!(0)
+S14: show()
+R13: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S16: myTurn()
-R15: OK!(0)
-S17: show()
-R16: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S15: myTurn()
+R14: OK!(0)
+S16: show()
+R15: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S18: myTurn()
-R17: OK!(0)
-S19: show()
-R18: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S17: myTurn()
+R16: OK!(0)
+S18: show()
+R17: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S20: myTurn()
-R19: OK!(0)
-S21: show()
-R20: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S19: myTurn()
+R18: OK!(0)
+S20: show()
+R19: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S22: myTurn()
-R21: OK!(0)
-S23: show()
-R22: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S21: myTurn()
+R20: OK!(0)
+S22: show()
+R21: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S24: myTurn()
-R23: OK!(0)
-S25: show()
-R24: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S23: myTurn()
+R22: OK!(0)
+S24: show()
+R23: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S26: myTurn()
-R25: OK!(0)
-S27: show()
-R26: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S25: myTurn()
+R24: OK!(0)
+S26: show()
+R25: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S28: myTurn()
-R27: OK!(0)
-S29: show()
-R28: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S27: myTurn()
+R26: OK!(0)
+S28: show()
+R27: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S30: myTurn()
-R29: OK!(0)
-S31: show()
-R30: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S29: myTurn()
+R28: OK!(0)
+S30: show()
+R29: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S32: myTurn()
-R31: OK!(0)
-S33: show()
-R32: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S31: myTurn()
+R30: OK!(0)
+S32: show()
+R31: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S34: myTurn()
-R33: OK!(0)
-S35: show()
-R34: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S33: myTurn()
+R32: OK!(0)
+S34: show()
+R33: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S36: myTurn()
-R35: OK!(0)
-S37: show()
-R36: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S35: myTurn()
+R34: OK!(0)
+S36: show()
+R35: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S38: myTurn()
-R37: OK!(0)
-S39: show()
-R38: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S37: myTurn()
+R36: OK!(0)
+S38: show()
+R37: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S40: myTurn()
-R39: OK!(0)
-S41: show()
-R40: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S39: myTurn()
+R38: OK!(0)
+S40: show()
+R39: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S42: myTurn()
-R41: OK!(0)
-S43: show()
-R42: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S41: myTurn()
+R40: OK!(0)
+S42: show()
+R41: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S44: myTurn()
-R43: OK!(0)
-S45: show()
-R44: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S43: myTurn()
+R42: OK!(0)
+S44: show()
+R43: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S46: myTurn()
-R45: OK!(0)
-S47: show()
-R46: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S45: myTurn()
+R44: OK!(0)
+S46: show()
+R45: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S48: myTurn()
-R47: OK!(0)
-S49: show()
-R48: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S47: myTurn()
+R46: OK!(0)
+S48: show()
+R47: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S50: myTurn()
-R49: OK!(0)
-S51: show()
-R50: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S49: myTurn()
+R48: OK!(0)
+S50: show()
+R49: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S52: myTurn()
-R51: OK!(0)
-S53: show()
-R52: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S51: myTurn()
+R50: OK!(0)
+S52: show()
+R51: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S54: myTurn()
-R53: OK!(0)
-S55: show()
-R54: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S53: myTurn()
+R52: OK!(0)
+S54: show()
+R53: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S56: myTurn()
-R55: OK!(0)
-S57: show()
-R56: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S55: myTurn()
+R54: OK!(0)
+S56: show()
+R55: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S58: myTurn()
-R57: OK!(0)
-S59: show()
-R58: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S57: myTurn()
+R56: OK!(0)
+S58: show()
+R57: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
-S60: myTurn()
-R59: OK!(0)
-S61: show()
-R60: OK!("--------------------
-b has moved forward 3 positions
-b has dealt the card: "You now use a normal SIX-sided die"
+S59: myTurn()
+R58: OK!(0)
+S60: show()
+R59: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
 
-	      Name	-	       Die	-	Position
-1.	         a	-	    Normal 6 (x1)	-	0/100
-2.	         b	-	    Normal 6 (x1)	-	3/100
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
 --------------------")
+S61: myTurn()
+R60: OK!(0)
+S62: show()
+R61: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S63: myTurn()
+R62: OK!(0)
+S64: show()
+R63: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S65: myTurn()
+R64: OK!(0)
+S66: show()
+R65: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S67: myTurn()
+R66: OK!(0)
+S68: show()
+R67: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S69: myTurn()
+R68: OK!(0)
+S70: show()
+R69: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S71: myTurn()
+R70: OK!(0)
+S72: show()
+R71: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S73: myTurn()
+R72: OK!(0)
+S74: show()
+R73: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S75: myTurn()
+R74: OK!(0)
+S76: show()
+R75: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S77: myTurn()
+R76: OK!(0)
+S78: show()
+R77: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S79: myTurn()
+R78: OK!(0)
+S80: show()
+R79: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S81: myTurn()
+R80: OK!(0)
+S82: show()
+R81: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S83: myTurn()
+R82: OK!(0)
+S84: show()
+R83: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S85: myTurn()
+R84: OK!(0)
+S86: show()
+R85: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S87: myTurn()
+R86: OK!(0)
+S88: show()
+R87: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S89: myTurn()
+R88: OK!(0)
+S90: show()
+R89: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S91: myTurn()
+R90: OK!(0)
+S92: show()
+R91: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S93: myTurn()
+R92: OK!(0)
+S94: show()
+R93: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S95: myTurn()
+R94: OK!(0)
+S96: show()
+R95: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S97: myTurn()
+R96: OK!(0)
+S98: show()
+R97: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S99: myTurn()
+R98: OK!(0)
+S100: show()
+R99: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S101: myTurn()
+R100: OK!(0)
+S102: show()
+R101: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S103: myTurn()
+R102: OK!(0)
+S104: show()
+R103: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S105: myTurn()
+R104: OK!(0)
+S106: show()
+R105: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S107: myTurn()
+R106: OK!(0)
+S108: show()
+R107: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S109: myTurn()
+R108: OK!(0)
+S110: show()
+R109: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S111: myTurn()
+R110: OK!(0)
+S112: show()
+R111: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S113: myTurn()
+R112: OK!(0)
+S114: show()
+R113: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S115: myTurn()
+R114: OK!(0)
+S116: show()
+R115: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S117: myTurn()
+R116: OK!(0)
+S118: show()
+R117: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S119: myTurn()
+R118: OK!(0)
+S120: show()
+R119: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S121: myTurn()
+R120: OK!(0)
+S122: show()
+R121: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S123: myTurn()
+R122: OK!(0)
+S124: show()
+R123: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S125: myTurn()
+R124: OK!(0)
+S126: show()
+R125: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S127: myTurn()
+R126: OK!(0)
+S128: show()
+R127: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S129: myTurn()
+R128: OK!(0)
+S130: show()
+R129: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S131: myTurn()
+R130: OK!(0)
+S132: show()
+R131: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S133: myTurn()
+R132: OK!(0)
+S134: show()
+R133: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S135: myTurn()
+R134: OK!(0)
+S136: show()
+R135: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S137: myTurn()
+R136: OK!(0)
+S138: show()
+R137: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S139: myTurn()
+R138: OK!(0)
+S140: show()
+R139: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S141: myTurn()
+R140: OK!(0)
+S142: show()
+R141: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S143: myTurn()
+R142: OK!(0)
+S144: show()
+R143: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S145: myTurn()
+R144: OK!(0)
+S146: show()
+R145: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S147: myTurn()
+R146: OK!(0)
+S148: show()
+R147: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S149: myTurn()
+R148: OK!(0)
+S150: show()
+R149: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S151: myTurn()
+R150: OK!(0)
+S152: show()
+R151: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S153: myTurn()
+R152: OK!(0)
+S154: show()
+R153: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S155: myTurn()
+R154: OK!(0)
+S156: show()
+R155: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S157: myTurn()
+R156: OK!(0)
+S158: show()
+R157: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S159: myTurn()
+R158: OK!(0)
+S160: show()
+R159: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S161: myTurn()
+R160: OK!(0)
+S162: show()
+R161: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S163: myTurn()
+R162: OK!(0)
+S164: show()
+R163: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S165: myTurn()
+R164: OK!(0)
+S166: show()
+R165: OK!("--------------------
+a has moved forward 5 positions
+a has dealt the card: "You switch position with a random player"
+
+	           Name	-	            Die	-	Position
+1.	         a 0.00$	-	    Normal 6 (x1)	-	5/100
+2.	         b 0.00$	-	    Normal 6 (x1)	-	0/100
+--------------------")
+S167: myTurn()
+S168: EXIT!()

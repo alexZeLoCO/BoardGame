@@ -69,10 +69,21 @@ public class Menu {
 	 * @param act Action of the Entry
 	 */
 	public void add (int idx, String desc, Consumer<Object> act) {
-		this.data.put(idx, new Entry(idx, desc, act));
-		this.size++;
+		if (!this.data.containsKey(idx)) {
+			this.data.put(idx, new Entry(idx, desc, act));
+			this.size++;
+		}
 	}
 	
+	/**
+	 * Removes the entry indexed by idx
+	 * 
+	 * @param idx Index of the entry to be removed
+	 */
+	public void remove (int idx) { 
+		this.data.remove(idx);
+	}
+
 	/**
 	 * Returns the Title, Entries and prompt of this Menu
 	 * 
@@ -88,8 +99,11 @@ public class Menu {
 	 * @return Index of the option selected.
 	 */
 	public int runSelection () {
-		System.out.printf("%s%s", this.toString(), this.prompt);
-		int selection = Integer.parseInt(scanner.nextLine());
+		int selection = 0;
+		do  {
+			System.out.printf("%s%s ", this.toString(), this.prompt);
+			selection = Integer.parseInt(scanner.nextLine());
+		} while (!this.data.containsKey(selection));
 		if (this.data.get(selection).hasLambda()) {
 			this.data.get(selection).accept(null);
 		}
@@ -100,7 +114,7 @@ public class Menu {
 	public String toString () {
 		String out = String.format("%s\n", this.title);
 		for (Entry e : this.data.values()) {
-			out+=String.format("%s\n", e.toString());
+			out+=String.format("%d. %s\n", e.getIdx(), e.getDesc());
 		}
 		return out;
 	}
@@ -111,7 +125,7 @@ public class Menu {
 	 * @author Alejandro Rodriguez Lopez
 	 *
 	 */
-	private final class Entry {
+	private class Entry {
 		private int index; // Index of the Entry
 		private String description; // Description of the Entry
 		private Consumer<Object> act; // Action of the entry (Optional)
