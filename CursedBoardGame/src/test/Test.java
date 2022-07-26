@@ -12,7 +12,7 @@ public class Test {
 		Player a = new Player("A");
 		a.move(10);
 		new Service();
-		Card c = (new Card("You switch position with a random player", (x) -> x.switchPositionWith((Player) Service.getPlayers().values().toArray()[new Random().nextInt(Service.getPlayers().size())])));
+		Card c = (new Card("You switch position with a random player", (x) -> x.switchPositionWith((Player) Service.getPlayers().values().toArray()[new Random().nextInt(Service.getPlayers().size())]), 500));
 		c.accept(a);
 		System.out.println(a.toString());
 

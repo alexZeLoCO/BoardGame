@@ -16,6 +16,8 @@ import Utils.Player;
  */
 public class Card {
 
+    private final double price; // Price of this card
+
 	/**
 	 * Description of what the card does.
 	 */
@@ -31,9 +33,10 @@ public class Card {
 	 * @param description Description of the card.
 	 * @param action Action to be performed when the card is drew.
 	 */
-	public Card (String description, Consumer<Player> action) {
+	public Card (String description, Consumer<Player> action, double price) {
 		this.description = description;
 		this.action = action;
+        this.price = price;
 	}
 
 	/**
@@ -44,6 +47,15 @@ public class Card {
 	public String getDescription () {
 		return this.description;
 	}
+
+    /**
+     * Returns this card's price.
+     *
+     * @return Price of this card.
+     */
+    public double getPrice ()  {
+        return this.price;
+    }
 
 	/**
 	 * Performs the action when a player draws this card.

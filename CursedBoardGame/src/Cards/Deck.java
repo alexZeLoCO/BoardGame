@@ -119,18 +119,18 @@ public class Deck {
 	 */
 	private void makeDieCards () {
 		for (Sides s : Sides.values()) {
-			this.add(new Card(String.format("You now use a normal %s-sided die", s.toString()), (x) -> x.setDie(DiceFactory.getDie(s, false))));
+			this.add(new Card(String.format("You now use a normal %s-sided die", s.toString()), (x) -> x.setDie(DiceFactory.getDie(s, false)), 500));
 		}
 		for (Sides s : Sides.values())  {
-			this.add(new Card(String.format("You now use a cursed %s-sided die", s.toString()), (x) -> x.setDie(DiceFactory.getDie(s, true))));
+			this.add(new Card(String.format("You now use a cursed %s-sided die", s.toString()), (x) -> x.setDie(DiceFactory.getDie(s, true)), 500));
 		}
-		this.add(new Card("Your die has been reset", (x) -> x.setDie(DiceFactory.getDie(Sides.SIX, false))));
-		this.add(new Card("Your die is now cursed/normal", (x) -> x.setDie(DiceFactory.curseSwitch(x.getDie()))));
-		this.add(new Card("You now have no die", (x) -> x.setNDice(0)));
-		this.add(new Card("You now have 1 die", (x) -> x.setNDice(1)));
+		this.add(new Card("Your die has been reset", (x) -> x.setDie(DiceFactory.getDie(Sides.SIX, false)), 500));
+		this.add(new Card("Your die is now cursed/normal", (x) -> x.setDie(DiceFactory.curseSwitch(x.getDie())), 500));
+		this.add(new Card("You now have no die", (x) -> x.setNDice(0), 750));
+		this.add(new Card("You now have 1 die", (x) -> x.setNDice(1), 750));
 		for (int i = 2 ; i < 5 ; i++) {
 			int a = i;
-			this.add(new Card(String.format("You now have %d dice", i), (x) -> x.setNDice(a)));
+			this.add(new Card(String.format("You now have %d dice", i), (x) -> x.setNDice(a), 750));
 		}
 	}
 
@@ -138,11 +138,11 @@ public class Deck {
 	 * Adds all the Cards that are related to positions.
 	 */
 	private void makePositionCards () {
-		this.add(new Card("Go forward 10 positions", (x) -> x.move(10)));
-		this.add(new Card("Go backwards 10 positions", (x) -> x.move(-10)));
-		this.add(new Card("You go back to the start", (x) -> x.move(x.getPosition()*(-1))));
-		this.add(new Card("Everybody goes back to the start", (x) -> Service.getPlayers().values().forEach((y) -> y.move(y.getPosition()*(-1)))));
-		this.add(new Card("You switch position with a random player", (x) -> x.switchPositionWith((Player) Service.getPlayers().values().toArray()[generator.nextInt(Service.getPlayers().size())])));
+		this.add(new Card("Go forward 10 positions", (x) -> x.move(10), 200));
+		this.add(new Card("Go backwards 10 positions", (x) -> x.move(-10), 200));
+		this.add(new Card("You go back to the start", (x) -> x.move(x.getPosition()*(-1)), 1000));
+		this.add(new Card("Everybody goes back to the start", (x) -> Service.getPlayers().values().forEach((y) -> y.move(y.getPosition()*(-1))), 1000));
+		this.add(new Card("You switch position with a random player", (x) -> x.switchPositionWith((Player) Service.getPlayers().values().toArray()[generator.nextInt(Service.getPlayers().size())]), 500));
 	}
 	
 	/**
@@ -151,9 +151,20 @@ public class Deck {
 	private void makeTurnCards () {
 		for (int i = 1 ; i < 11 ; i++) {
 			int a = i;
-			this.add(new Card("You now lose " + i + " turns", (x) -> x.setSkipTurns(a)));
+			this.add(new Card("You now lose " + i + " turns", (x) -> x.setSkipTurns(a), 150));
 		}
 	}
+
+    /**
+     * Adds all the Cards that are related to money.
+     */
+    private void makeMoneyCards () {
+        for (int i = 0 ; i < 100 ; i++) {
+            double d = function(generator.nextDouble());
+            this.add(new Card(String.format("You earn %.2f$", d), (x) -> x.earn(Double.parseDouble(String.format("%.2f", d))), 500));
+        }
+        this.add(new Card(String.format("You lose all your money."), (x) -> x.earn(x.getMoney()*(-1)), 500));
+    }
 
 	/**
 	 * Adds all the Cards.
@@ -162,7 +173,18 @@ public class Deck {
 		this.makeDieCards();
 		this.makePositionCards();
 		this.makeTurnCards();
+        this.makeMoneyCards();
 	}
+
+    /**
+     * Returns the money acquired
+     *
+     * @param d Percentage [0, 1]
+     * @return $
+     */
+    private double function (double d) {
+        return Math.pow(d, Math.pow(Math.E, d+1))*50; 
+    }
 
 	/**
 	 * Resets the number of cards.

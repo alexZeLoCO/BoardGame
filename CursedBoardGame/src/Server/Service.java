@@ -176,11 +176,11 @@ public class Service implements CursedBoardGame {
 		for (int i = 0 ; i < 20 ; i++) {
 			s+="-";
 		}
-		s += String.format("\n%s\n\t%10s\t-\t%10s\t-\tPosition\n", lastPlay, "Name", "Die");
+		s += String.format("\n%s\n\t%10s ($)\t-\t%10s\t-\tPosition\n", lastPlay, "Name", "Die");
 		Iterator<Player> itr = players.values().iterator();
 		for (int i = 0 ; i < players.size() ; i++) {
 			p = itr.next();
-			s+=String.format("%d.\t%10s\t-\t%10s %d (x%d)\t-\t%d/%d\n", i+1, p.getName(), p.getDie() instanceof CursedDie ? "Cursed" : "Normal", p.getDie().getSides(), p.getNDice(), p.getPosition(), CELLS);
+			s+=String.format("%d.\t%10s (%.2f)\t-\t%10s %d (x%d)\t-\t%d/%d\n", i+1, p.getName(), p.getMoney(), p.getDie() instanceof CursedDie ? "Cursed" : "Normal", p.getDie().getSides(), p.getNDice(), p.getPosition(), CELLS);
 		}
 		for (int i = 0 ; i < 20 ; i++) {
 			s+="-";

@@ -19,7 +19,8 @@ public class Player {
 	private Die currentDie; // Current die of the player
 	private int nDie; // Number of dice
 	private int skipTurns; // Number of turns to skip
-	
+	private double money; // Money of the player
+                          //
 	/**
 	 * Creates a new player with a name.
 	 * @param name Name of the player.
@@ -29,6 +30,7 @@ public class Player {
 		this.currentDie = new Die();
 		this.nDie = 1;
 		this.skipTurns = 0;
+        this.money = 0;
 	}
 	
 	/**
@@ -101,6 +103,15 @@ public class Player {
 		return this.name;
 	}
 
+    /**
+     * Returns the player's money.
+     * 
+     * @return Player's money.
+     */
+    public double getMoney () {
+        return this.money;
+    }
+
 	/**
 	 * Rolls this player's dice.
 	 * 
@@ -143,7 +154,26 @@ public class Player {
 		this.position+=n;
 		return String.format("%s has moved %s %d positions\n", this.name, dir, n);
 	}
+
+    /**
+     * Gives d$ to the player.
+     *
+     * @param d $
+     */
+    public void earn (double d) {
+        this.money+=d;
+    }
 	
+    /**
+     * Buys an item.
+     *
+     * @param b Card to be bought.
+     * @return True if the item was bought. False if it is not possible to be bought.
+     */
+    public boolean buy (Card b) {
+	    return false;
+    }
+
 	/**
 	 * Switches position with a given player
 	 * 
