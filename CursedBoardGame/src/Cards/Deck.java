@@ -69,7 +69,7 @@ public class Deck {
 	 * 
 	 * @return Number of unique cards in the deck.
 	 */
-	private int cards () {
+	public int cards () {
 		return this.deck.size();
 	}
 
@@ -114,6 +114,30 @@ public class Deck {
 		return deck.get(idx);
 	}
 	
+	/**
+	 * Returns the card in the designated position.
+	 * 
+	 * @param idx Index of the card
+	 * @return Card
+	 */
+	public Card getCardAt (int idx) {
+		left.set(idx, left.get(idx)-1);
+		if (--totalCards == 0) {
+			this.shuffle();
+		}
+		return this.deck.get(idx);
+	}
+	
+	/**
+	 * Checks if there is a card left in the desiganted position.
+	 * 
+	 * @param idx Index of the card
+	 * @return Truf if there are cards left of that type
+	 */
+	public boolean isCardLeft (int idx) {
+		return this.left.get(idx) != 0;
+	}
+
 	/**
 	 * Adds all the Cards that are related to dice.
 	 */
@@ -195,4 +219,28 @@ public class Deck {
 			this.left.add(i, N_CARDS);
 		}
 	}
+	
+	public String cardsUnder (double d) {
+		String out = "";
+		int i = 0;
+		for (Card c : this.deck) {
+			if (c.getPrice() <= d) {
+				out+=String.format("%d. %s (%d left)\n", i, c.toString(), this.left.get(i));
+			}
+			i++;
+		}
+		return out;
+		
+	}
+
+	@Override
+	public String toString () {
+		String out = "";
+		int i = 0;
+		for (Card c : this.deck) {
+			out+=String.format("%d. %s (%d left)\n", i, c.toString(), this.left.get(i++));
+		}
+		return out;
+	}
+
 }

@@ -1,5 +1,6 @@
 package Cards;
 
+import java.io.Serializable;
 import java.util.function.Consumer;
 
 import Utils.Player;
@@ -14,9 +15,11 @@ import Utils.Player;
  * @author Alejandro Rodriguez Lopez
  *
  */
-public class Card {
+public class Card implements Serializable {
 
-    private final double price; // Price of this card
+	private static final long serialVersionUID = 1L;
+
+	private final double price; // Price of this card
 
 	/**
 	 * Description of what the card does.
@@ -69,7 +72,7 @@ public class Card {
 
 	@Override
 	public String toString () {
-		return String.format("%s", this.description);
+		return String.format("%s (%.2f$)", this.getDescription(), this.getPrice());
 	}
 	
 }

@@ -87,7 +87,7 @@ public class Menu {
 	 * 
 	 * @return Index of the option selected.
 	 */
-	public int runSelection () {
+	public int runSelectionIdx () {
 		System.out.printf("%s%s", this.toString(), this.prompt);
 		int selection = Integer.parseInt(scanner.nextLine());
 		if (this.data.get(selection).hasLambda()) {

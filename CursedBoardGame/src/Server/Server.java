@@ -6,6 +6,9 @@ import lib.ChannelException;
 import lib.CommServer;
 import optional.Trace;
 
+import Cards.Card;
+import Cards.Deck;
+
 class Server {
 	private static void registrarOperaciones(CommServer com) {
 		com.addFunction("startGame", (o, x) -> ((Service) o).startGame());
@@ -17,7 +20,8 @@ class Server {
 		com.addAction("setLobbySize", (o, x) -> ((Service)o).setLobbySize((int) x[0]), true);
 		com.addFunction("isEmptyLobby", (o, x) -> ((Service)o).isEmptyLobby());
 		com.addFunction("win", (o, x) -> ((Service)o).win());
-		com.addFunction("playerSwitch", (o, x) -> ((Service)o).playerSwitch((int) x[0]));
+		com.addAction("buy", (o, x) -> ((Service)o).buy(Deck.getInstance().getCardAt(Integer.parseInt((String) x[0]))), true);
+		com.addFunction("money", (o, x) -> ((Service)o).money());
 	}
 
 	public static void main(String[] args) {

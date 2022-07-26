@@ -2,44 +2,15 @@ package Client;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
-import java.util.Optional;
 import java.util.Scanner;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.IntSupplier;
+
+import Utils.Menu;
+import Cards.Deck;
 
 import Common.CursedBoardGame;
-import Server.Service;
 import lib.ChannelException;
 import lib.CommClient;
 import lib.ProtocolMessages;
-
-enum ReplyCode {
-	CHOOSE_PLAYER (1, () -> Service.runPlayerSelection());
-	
-	int v;
-	IntSupplier act;
-
-	ReplyCode (int v) {
-		this(v, null);
-	}
-	
-	ReplyCode (int v, IntSupplier act) {
-		this.v = v;
-		this.act = act;
-	}
-	
-	int getV () {
-		return this.v;
-	}
-	
-	Optional<Integer> run () {
-		if (this.act != null) {
-			return Optional.ofNullable(this.act.getAsInt());
-		}
-		return Optional.empty();
-	}
-}
 
 /**
  * Client Class.
@@ -59,6 +30,8 @@ public class Client {
 
 	// Input system
 	private static Scanner scanner = new Scanner(System.in);
+	
+	private static Menu m = new Menu ("Play menu", "//>");
 
 	/**
 	 * Checks if the game has started.
@@ -115,6 +88,24 @@ public class Client {
 	}
 	
 	/**
+	 * Returns your current amount of money
+	 * 
+	 * @return Current amount of money
+	 * @throws IOException
+	 * @throws ChannelException
+	 */
+	public static double money () throws IOException, ChannelException {
+		com.sendEvent(new ProtocolMessages("money"));
+		double d = 0;
+		try {
+			d = (double) com.processReply(com.waitReply());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return d;
+	}
+	
+	/**
 	 * Shows the state of the game.
 	 * 
 	 * @throws IOException
@@ -139,31 +130,21 @@ public class Client {
 		com.sendEvent(new ProtocolMessages("play"));
 		try {
 			Object o = (Object) com.processReply(com.waitReply());
-			if (o instanceof ReplyCode) {
-				Optional<Integer> idx = ((ReplyCode)o).run();
-				replyPlayerSwitch(idx.orElse(null));
-			} else {
-				System.out.printf("%s\n\n", o.toString());
-			}
+			System.out.printf("%s\n\n", o.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
+	
 	/**
-	 * Replies to the server with a player selection
+	 * Buys an item.
 	 * 
-	 * @param idx Index of the player selected or null if none was selected
 	 * @throws IOException
 	 * @throws ChannelException
 	 */
-	public static void replyPlayerSwitch (int idx) throws IOException, ChannelException {
-		com.sendEvent(new ProtocolMessages("playerSwitch", idx));
-		try {
-			System.out.printf("%s\n\n", com.processReply(com.waitReply()));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public static void buy () throws IOException, ChannelException {
+		System.out.printf("%s\n//> ",Deck.getInstance().cardsUnder(money()));
+		com.sendEvent(new ProtocolMessages("buy", scanner.nextLine()));
 	}
 
 	/**
@@ -210,6 +191,11 @@ public class Client {
 		return false;
 	}
 
+	private static void makeMenu () {
+		m.add(0, "play");
+		m.add(1, "buy");
+	}
+
 	public static void main(String[] args) {
 
 		try {
@@ -235,6 +221,7 @@ public class Client {
 
 		try {
 
+			makeMenu();
 			setPlayers();
 			setName();
 			
@@ -252,6 +239,10 @@ public class Client {
 					show();
 					Thread.sleep(2000);
 				} while (n == 0); // esperando el turno
+
+				switch(m.runSelectionIdx()) {
+					case (1): buy(); break;
+				}
 
 				System.out.println("Enter to roll the dice!");
 				scanner.nextLine();

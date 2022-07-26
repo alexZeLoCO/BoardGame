@@ -20,7 +20,7 @@ public class Player {
 	private int nDie; // Number of dice
 	private int skipTurns; // Number of turns to skip
 	private double money; // Money of the player
-                          //
+                          
 	/**
 	 * Creates a new player with a name.
 	 * @param name Name of the player.
@@ -164,16 +164,6 @@ public class Player {
         this.money+=d;
     }
 	
-    /**
-     * Buys an item.
-     *
-     * @param b Card to be bought.
-     * @return True if the item was bought. False if it is not possible to be bought.
-     */
-    public boolean buy (Card b) {
-	    return false;
-    }
-
 	/**
 	 * Switches position with a given player
 	 * 
